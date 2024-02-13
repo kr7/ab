@@ -188,3 +188,114 @@ group by tranzakcio_id
 order by vegosszeg desc) as tranzakciok_vegosszeggel
 group by vevo;
 ```
+
+Tranzakciók naponkénti darabszámának meghatározása
+
+```
+select distinct tranzakcio_id, datum from Tranzakciok;
+select count(*) from Aruk
+
+select count(*) from
+(select distinct tranzakcio_id, datum from Tranzakciok) as tranzakcio_datum;
+
+select datum, count(*) from
+(select distinct tranzakcio_id, datum from Tranzakciok) as tranzakcio_datum
+group by datum;
+```
+
+Napi forgalom
+
+```
+select * from Tranzakciok;
+
+select *, ar as egysegar from Tranzakciok, Aruk 
+where Aruk.cikkszam = termek; -- MI LENNE HA ELFELEJTENENK A WHERE FELTÉTELT?
+
+select Tranzakciok.*, ar as egysegar from Tranzakciok, Aruk 
+where Aruk.cikkszam = termek;
+
+select Tranzakciok.*, ar as egysegar, round(ar*mennyiseg,2) as teljes_ar from Tranzakciok, Aruk 
+where Aruk.cikkszam = termek;
+
+select round(sum(teljes_ar),2), datum from
+(select Tranzakciok.*, ar as egysegar, round(ar*mennyiseg,2) as teljes_ar from Tranzakciok, Aruk 
+where Aruk.cikkszam = termek) as tranzakciok_arakkal
+group by datum
+order by datum;
+```
+
+# Adatok változtatása és törlése
+
+Az alábbi utasítások közül melyik működik? Miért?
+
+```
+update Vasarlok set nev = 'Éva neni' where vasarlo_id = 'V03';
+update Vasarlok set nev = 'Pista Bácsi' where nev = 'Pista Bacsi';  
+update Vasarlok set nev = 'Pista Bácsi'; 
+delete from Aruk where cikkszam = '008';
+delete from Aruk;
+```
+
+# Tranzakciók tábla normalizálása
+
+```
+create table tranzakciok_alapadatai 
+(select distinct tranzakcio_id, datum, vevo from tranzakciok);
+
+ALTER TABLE tranzakciok_alapadatai ADD PRIMARY KEY (tranzakcio_id);
+
+create table tranzakcio_termekek as 
+(select tranzakcio_id, termek, mennyiseg from tranzakciok); 
+
+drop table tranzakciok;
+```
+
+# Vásárlók címének normalizálása, adatok elérése Java-ból
+
+SQL:
+```
+create table Vasarlok1 (
+  vasarlo_id varchar(10) unique,
+  nev varchar(20),
+  irszam varchar(4),
+  utca_hsz varchar(50),
+  primary key (vasarlo_id) );
+
+create table Varosok (
+  irszam varchar(4) unique,
+  varos varchar(30),
+  primary key (irszam) );
+```
+
+Java:
+```
+import java.sql.*;
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World' :-)");
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con=DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/pekseg","krisztian","daniel");
+            //here sonoo is database name, root is username and password
+            Statement stmt=con.createStatement();
+            ResultSet rs=stmt.executeQuery("select vasarlo_id, nev, cim from Vasarlok");
+            while(rs.next()) {
+                String vasarlo_id = rs.getString(1);
+                String nev = rs.getString(2);
+                String cim = rs.getString(3);
+                String irsz = cim.substring(0,4);
+                String varosnev = cim.substring(5, cim.indexOf(","));
+                String utca_hsz = cim.substring(cim.indexOf(",")+1).trim();
+
+                System.out.println(vasarlo_id+"|"+nev+"|"+irsz+"|"+varosnev+"|"+utca_hsz);
+
+                stmt=con.createStatement();
+                stmt.executeUpdate("insert into Varosok values (\""+irsz+"\",\""+varosnev+"\")");
+                stmt.executeUpdate("insert into Vasarlok1 values (\""+vasarlo_id+"\",\""+nev+"\",\""+irsz+"\",\""+utca_hsz+"\")");
+            }
+            con.close();
+        }catch(Exception e){ System.out.println(e);}
+    }
+}
+```
