@@ -73,3 +73,39 @@ show databases;
 use pekseg;
 show tables;
 ``` 
+
+# Adatok lekérdezése, sorok és oszlopok kiválasztása, az eredmény rendezése
+
+```
+select * from Aruk;
+select * from Aruk where ar > 1;
+select megnevezes, ar from Aruk where ar > 1;
+select megnevezes, ar from Aruk where ar > 1 order by ar;
+select megnevezes, ar from Aruk where ar > 1 order by ar desc;
+```
+
+Ahhoz, hogy az eredményt rendezetten kapjuk, meg kell adnunk, hogy mi szerint rendezünk. Ennek hiányában az eredménytábla sorainak sorrendjére nincs semmilyen garancia (nem biztos, hogy pl. cikkszám szerint, vagy bármi más szerint, rendezettek):
+```
+select * from Aruk order by megnevezes;
+```
+
+```
+select * from Vasarlok;
+select * from Vasarlok where cim = '2459';
+select * from Vasarlok where cim like '2459%';
+
+select * from Tranzakciok limit 5;
+select * from Tranzakciok where tranzakcio_id = 'T0001';
+```
+
+# Új sor (rekord, példány) beszúrása az adattáblába
+
+Végrehajtható-e az alábbi utasítás? Miért? Tipp: lásd az adattábla létrehozását!
+```
+insert into Aruk values ('001','alma','100','1.99');
+```
+
+És az alábbi?
+```
+insert into Aruk values ('008','alma','100','1.99');
+```
