@@ -109,3 +109,82 @@ insert into Aruk values ('001','alma','100','1.99');
 ```
 insert into Aruk values ('008','alma','100','1.99');
 ```
+
+# Több táblára vonatkozó lekérdezések 
+
+A "T0001" azonosítójú tranzakció mellé "odaírjuk" a termék megnevezését illetve árát:
+
+```
+select Tranzakciok.*, Aruk.megnevezes from Tranzakciok, Aruk 
+where tranzakcio_id = 'T0001' and Tranzakciok.termek = Aruk.cikkszam;
+
+select Tranzakciok.*, Aruk.megnevezes, Aruk.ar from Tranzakciok, Aruk 
+where tranzakcio_id = 'T0001' and Tranzakciok.termek = Aruk.cikkszam;
+```
+
+Az alábbiak közül melyik lekérdezés adja azt, hogy mennyit költött a vevő?
+Miért használjuk a round függvényt?
+
+```
+select sum(Aruk.ar) from Tranzakciok, Aruk 
+where tranzakcio_id = 'T0001' and Tranzakciok.termek = Aruk.cikkszam; 
+
+select Tranzakciok.*, Aruk.megnevezes, Aruk.ar, round(Aruk.ar*mennyiseg, 2) from Tranzakciok, Aruk 
+where tranzakcio_id = 'T0001' and Tranzakciok.termek = Aruk.cikkszam;
+
+select Tranzakciok.*, Aruk.megnevezes, 
+Aruk.ar as egysegar, 
+round(Aruk.ar*mennyiseg, 2) as teljes_ar 
+from Tranzakciok, Aruk 
+where tranzakcio_id = 'T0001' and Tranzakciok.termek = Aruk.cikkszam;
+```
+
+A tranzakció végösszegének kiszámítása minden egyes tranzakcióra:
+
+```
+select tranzakcio_id, sum(round(Aruk.ar*mennyiseg, 2)) as vegosszeg 
+from Tranzakciok, Aruk 
+where Tranzakciok.termek = Aruk.cikkszam
+group by tranzakcio_id;
+```
+
+Miért szükséges a min függvény, ha a tranzakció dátumát illetve a vevő kódját is meg akarjuk jeleníteni?
+
+```
+select tranzakcio_id, min(datum), sum(round(Aruk.ar*mennyiseg, 2)) as vegosszeg 
+from Tranzakciok, Aruk 
+where Tranzakciok.termek = Aruk.cikkszam
+group by tranzakcio_id;
+
+select tranzakcio_id, min(datum),  min(vevo), sum(round(Aruk.ar*mennyiseg, 2)) as vegosszeg 
+from Tranzakciok, Aruk 
+where Tranzakciok.termek = Aruk.cikkszam and vevo is not null
+group by tranzakcio_id;
+
+select tranzakcio_id, min(datum),  min(vevo), sum(round(Aruk.ar*mennyiseg, 2)) as vegosszeg 
+from Tranzakciok, Aruk 
+where Tranzakciok.termek = Aruk.cikkszam and vevo is not null
+group by tranzakcio_id
+order by vegosszeg desc;
+
+select tranzakcio_id, min(datum),  min(vevo) as vevo, sum(round(Aruk.ar*mennyiseg, 2)) as vegosszeg 
+from Tranzakciok, Aruk 
+where Tranzakciok.termek = Aruk.cikkszam and vevo is not null
+group by tranzakcio_id
+having vegosszeg > 5
+order by vegosszeg desc;
+```
+
+# A lekérdezés eredményének használata egy másik lekérdezésben
+
+A vevők összes költésének lekérdezése:
+
+```
+select vevo, sum(vegosszeg) as vevo_osszes_koltese from
+(select tranzakcio_id, min(datum),  min(vevo) as vevo, sum(round(Aruk.ar*mennyiseg, 2)) as vegosszeg 
+from Tranzakciok, Aruk 
+where Tranzakciok.termek = Aruk.cikkszam and vevo is not null
+group by tranzakcio_id
+order by vegosszeg desc) as tranzakciok_vegosszeggel
+group by vevo;
+```
