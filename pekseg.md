@@ -109,7 +109,17 @@ insert into Aruk values ('001','alma','100','1.99');
 ```
 insert into Aruk values ('008','alma','100','1.99');
 
-insert into Aruk values ('010', 'alma', 350, 1.99),  ('011', 'korte', 350, 1.99)
+insert into Aruk values ('010', 'banan', 350, 1.99),  ('011', 'korte', 350, 1.99)
+
+insert into Aruk(cikkszam, megnevezes) values ('012', 'narancs') 
+
+create table furcsa_megnevezesek 
+(select megnevezes from Aruk
+where megnevezes like 't%');
+
+insert into furcsa_megnevezesek 
+(select megnevezes from Aruk where megnevezes like "k%")
+
 ```
 
 # Több táblára vonatkozó lekérdezések 
