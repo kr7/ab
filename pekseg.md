@@ -72,6 +72,7 @@ show databases;
 ```
 use pekseg;
 show tables;
+show columns from Aruk;
 ``` 
 
 # Adatok lekérdezése, sorok és oszlopok kiválasztása, az eredmény rendezése
