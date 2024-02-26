@@ -105,9 +105,11 @@ Végrehajtható-e az alábbi utasítás? Miért? Tipp: lásd az adattábla létr
 insert into Aruk values ('001','alma','100','1.99');
 ```
 
-És az alábbi?
+És az alábbiak?
 ```
 insert into Aruk values ('008','alma','100','1.99');
+
+insert into Aruk values ('010', 'alma', 350, 1.99),  ('011', 'korte', 350, 1.99)
 ```
 
 # Több táblára vonatkozó lekérdezések 
@@ -122,7 +124,7 @@ select Tranzakciok.*, Aruk.megnevezes, Aruk.ar from Tranzakciok, Aruk
 where tranzakcio_id = 'T0001' and Tranzakciok.termek = Aruk.cikkszam;
 ```
 
-Az alábbiak közül melyik lekérdezés adja azt, hogy mennyit költött a vevő?
+Az alábbiak közül melyik lekérdezés adja azt, hogy mennyit költött a vevő az egyes tranzakciokban?
 Miért használjuk a round függvényt?
 
 ```
