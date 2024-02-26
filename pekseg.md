@@ -96,6 +96,8 @@ select * from Vasarlok where cim like '2459%';
 
 select * from Tranzakciok limit 5;
 select * from Tranzakciok where tranzakcio_id = 'T0001';
+
+select distinct(tranzakcio_id) from Tranzakciok
 ```
 
 # Új sor (rekord, példány) beszúrása az adattáblába
