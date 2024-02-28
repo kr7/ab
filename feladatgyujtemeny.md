@@ -11,6 +11,12 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 
 # 1. Algortimuselméleti alapozás
 
+...nemsokára itt lesznek az első kérdések...
+
 # 2. SQL
 
+...nemsokára itt lesznek az első kérdések...
+
 # Megoldások
+
+...nemsokára itt lesznek az első kérdések megoldásai...
