@@ -100,6 +100,12 @@ select * from Tranzakciok where tranzakcio_id = 'T0001';
 
 select distinct(tranzakcio_id) from Tranzakciok
 ```
+Legkisebb áru termék megnevezésének lekérdezése
+
+```
+select megnevezes from Aruk 
+where ar = (select min(ar) from Aruk);
+```
 
 # Új sor (rekord, példány) beszúrása az adattáblába
 
