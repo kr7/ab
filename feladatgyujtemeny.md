@@ -11,7 +11,7 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 
 # 1. Algortimuselméleti alapozás
 
-1.1. Kinek a nevéből származik az algoritmus szavunk?
+**1.1. Kinek a nevéből származik az algoritmus szavunk?**
 
 (A) Al Gore
 
@@ -22,7 +22,7 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 (D) Aladdin
 
 
-1.2. Az alábbiak közül melyik írja le legjobban az algoritmus szó jelentését?
+**1.2. Az alábbiak közül melyik írja le legjobban az algoritmus szó jelentését?**
 
 (A) Megadott gyakorisággal (ritmusban) ismételt lépések sorozata.
 
@@ -33,7 +33,7 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 (D) Nagy számításigényű eljárás, amelynek végrehajtása a legmodernebb számítógéppel is sokáig, legalább 2 óráig, tart.
 
 
-1.3. Tekinthető-e egy étel elkészítését leíró recept algoritmusnak?
+**1.3. Tekinthető-e egy étel elkészítését leíró recept algoritmusnak?**
 
 (A) Igen.
 
@@ -51,7 +51,7 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 
 # 3. Relációs algebra
 
-3.1. Kinek a nevéből származik az algebra szavunk?
+**3.1. Kinek a nevéből származik az algebra szavunk?**
 
 (A) Al-Hvárizmi
 
@@ -65,7 +65,7 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 
 1.1. C
 1.2. B
-
+1.3. A
 
 3.1. A
 
