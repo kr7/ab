@@ -99,7 +99,30 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 (D) A rendezetlen adatokban történő keresés $O(n)$ komplexitással megoldható.
 
 
-...nemsokára további kérdések lesznek itt...
+**1.9. Egy lineáris, azaz $O(n)$ komplexitású keresőalgoritmus 1000 elem között átlagosan 0.3 másodperc alatt találja meg a keresett elemet. 
+Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a keresett elemet 1 millió elem között?**
+
+(A) $1 000 000 \times 0.3 = 300 000$ másodperc alatt.
+
+(B) $1 000 \times 0.3 = 300$ másodperc alatt.
+
+(C) $1000 \times 1000 \times 0.3 = 300 000$ másodperc alatt.
+
+(D) $log_2 1000 \times 0.3 = 3$ másodperc alatt.
+
+
+**1.10. Egy logaritmikus, azaz $O(log_2 n)$ komplexitású keresőalgoritmus 1000 elem között átlagosan 0.3 másodperc alatt találja meg a keresett elemet. 
+Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a keresett elemet 1 millió elem között?**
+
+(A) $1 000 000 \times 0.3 = 300 000$ másodperc alatt.
+
+(B) $1 000 \times 0.3 = 300$ másodperc alatt.
+
+(C) $1000 \times 1000 \times 0.3 = 300 000$ másodperc alatt.
+
+(D) $log_2 1000 \times 0.3 = 3$ másodperc alatt.
+
+
 
 # 2. SQL
 
@@ -127,6 +150,8 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 1.6. C
 1.7. A
 1.8. C
+1.9. B
+1.10. D
 
 
 3.1. A
