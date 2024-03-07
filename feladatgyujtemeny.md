@@ -55,7 +55,7 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 (D) $O(n^2)$
 
 
-**1.5. Ha egy rendezőalgoritmus komplexitása $O(n^2)$ és ezzel az algoritmussal egy 100 sorból álló adattábla rendezése 0.01 másodpercig tart, akkor nagyságrendileg mennyi ideig fog tartani egy ugyanolyan jellegű, de 5000 soros adattábla rendezése ezzel az algoritmussal?**
+**1.5. Egy $O(n^2)$ komplexitású rendezőalgoritmussal rendezünk egy 100 sorból álló adattáblát, és ez 0.01 másodpercig tart. Nagyságrendileg mennyi ideig fog tartani egy ugyanolyan jellegű, de 5000 soros adattábla rendezése ugyanezzel az algoritmussal?**
 
 (A) $50 \times 0.01 = 0.5$ másodpercig
 
@@ -65,7 +65,38 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 
 (D) $5000 \times 0.01 = 50$ másodpercig
 
-(C) 
+
+**1.6. Egy $O(n log_2 n)$ komplexitású rendezőalgoritmussal rendezünk egy 100 sorból álló adattáblát, és ez 0.01 másodpercig tart. Nagyságrendileg mennyi ideig fog tartani egy ugyanolyan jellegű, de 100000 soros adattábla rendezése ugyanezzel az algoritmussal?**
+
+(A) $1000 \times log_2 1000 \times 0.01 = 100$ másodpercig
+
+(B) $1000 \times 0.01 = 10$ másodpercig
+
+(C) $100000 \times log_2 100000 \times 0.01 = 1661$ másodpercig
+
+(D) $1000 \times 1000 \times 0.01 = 10000$ másodpercig
+
+
+**1.7. Az alábbi állítások közül melyik igaz a rendezőalgoritmusokra?**
+
+(A) A buborékrendezése komplexitása $O(n^2)$.
+
+(B) Nem létezik a buborékrendezésnél hatékonyabb rendezőalgoritmus.
+
+(C) A buborékrendezése komplexitása $O(n log n)$.
+
+(D) Az előbbi három állítás közül egyik sem igaz.
+
+
+**1.8. Az alábbi állítások keresőalgoritmusokra vonatkoznak. Melyik hamis?**
+
+(A) Rendezett adatokban lényegesen gyorsabban tudunk keresni, mint rendezetlen adatokban.
+
+(B) Rendezett adatokban tudunk $O(log n)$ komplexitással keresni.
+
+(C) Rendezetelen adatokban történő keresés esetére nem létezik $O(n log n)$ komplexitásúnál hatékonyabb algoritmus.
+
+(D) A rendezetlen adatokban történő keresés $O(n)$ komplexitással megoldható.
 
 
 ...nemsokára további kérdések lesznek itt...
@@ -93,6 +124,10 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 1.3. A
 1.4. D
 1.5. B
+1.6. C
+1.7. A
+1.8. C
+
 
 3.1. A
 
