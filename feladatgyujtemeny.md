@@ -43,6 +43,31 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 
 (D) Csak akkor, ha az elkészítéshez valamilyen elektronikus eszköz (tűzhely, mikrosütő, konyhai robotgép, stb.) szükséges.
 
+
+**1.4. A buborékrendezés (bubble sort) komplexitása...**
+
+(A) $O(log n)$
+
+(B) $O(n)$
+
+(C) $O(n log n)$
+
+(D) $O(n^2)$
+
+
+**1.5. Ha egy rendezőalgoritmus komplexitása $O(n^2)$ és ezzel az algoritmussal egy 100 sorból álló adattábla rendezése 0.01 másodpercig tart, akkor nagyságrendileg mennyi ideig fog tartani egy ugyanolyan jellegű, de 5000 soros adattábla rendezése ezzel az algoritmussal?**
+
+(A) $50 \times 0.01 = 0.5$ másodpercig
+
+(B) $50 \times 50 \times 0.01 = 25$ másodpercig
+
+(C) $\sqrt{50} \times 0.01 = 0.07$ másodpercig
+
+(D) $5000 \times 0.01 = 50$ másodpercig
+
+(C) 
+
+
 ...nemsokára további kérdések lesznek itt...
 
 # 2. SQL
@@ -66,6 +91,8 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 1.1. C
 1.2. B
 1.3. A
+1.4. D
+1.5. B
 
 3.1. A
 
