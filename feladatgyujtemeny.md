@@ -9,7 +9,7 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 
 *Buza Krisztián*
 
-# 1. Algortimuselméleti alapozás
+# 1. Algoritmuselméleti alapozás
 
 **1.1. Kinek a nevéből származik az algoritmus szavunk?**
 
