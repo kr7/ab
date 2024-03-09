@@ -126,7 +126,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 # 2. SQL
 
-2.1. Egy oszlop típusát DECIMAL(6,2)-re választotta meg. Ez mit jelent? 
+**2.1. Egy oszlop típusát DECIMAL(6,2)-re választotta meg. Ez mit jelent?**
 
 (A) Az oszlop 6 karakterből álló karaktersorozatot képes tárolni, amelyben legfeljebb 2 különleges karakter (?, !, $, stb.) lehet. 
 
@@ -135,6 +135,28 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (C) Az oszlop olyan számot tárol, amelynek egészrésze legfeljebb 4 jegyű és ezen kívül legfeljebb 2 számjeggyel rendelkezik a tizedesvessző után. 
 
 (D) Az oszlop csak olyan 6-jegyű számokat képes tárolni, amelyek százasokra kerekítettek, azaz 2 nullára végződnek, pl. 1200.
+
+
+**2.2. Az alábbiak közül melyik SQL paranccsal tudjuk a "Termekek" tábla "ar" oszlopának típusát egész számról (int) egy 2 tizedesjeggyel rendelkező számra változtatni?**
+
+(A) alter table Termekek modify ar decimal(8,2);
+
+(B) update table Termekek modify ar from int to decimal(8,2);
+
+(C) modify table Termekek change ar from int to decimal(8,2);
+
+(D) change table Termekek modify ar decimal(8,2);
+
+
+**2.3. Mi a különbség az UPDATE és ALTER SQL utasítások között?**
+
+(A) Semmi. Ezek a kulcsszavak egymás szinonímáiként használhatók, azaz UPDATE helyett ALTER-t is használhatunk és fordítva.
+
+(B) Az UPDATE a táblában lévő adatokat változtatja, az ALTER a tábla szerkezetét (pl. oszlopokat vagy azok típusát).
+
+(C) Az ALTER a táblában lévő adatokat változtatja, az UPDATE a tábla szerkezetét (pl. oszlopokat vagy azok típusát).
+
+(D) Az UPDATE utasítással az oszlopok típusát régebbi típusokról lehet újabb, modernebb típusokra változtatni; az ALTER-rel a újabb típusok változtathatók régebbiekre.
 
 
 # 3. Relációs algebra
@@ -163,6 +185,8 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 1.10. D
 
 2.1. C
+2.2. A
+2.3. B
 
 3.1. A
 
