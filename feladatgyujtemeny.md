@@ -126,7 +126,16 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 # 2. SQL
 
-...nemsokára itt lesznek az első kérdések...
+2.1. Egy oszlop típusát DECIMAL(6,2)-re választotta meg. Ez mit jelent? 
+
+(A) Az oszlop 6 karakterből álló karaktersorozatot képes tárolni, amelyben legfeljebb 2 különleges karakter (?, !, $, stb.) lehet. 
+
+(B) Az oszlop olyan számot tárol, amelynek egészrésze legfeljebb 6 jegyű és ezen kívül legfeljebb 2 számjeggyel rendelkezik a tizedesvessző után. 
+
+(C) Az oszlop olyan számot tárol, amelynek egészrésze legfeljebb 4 jegyű és ezen kívül legfeljebb 2 számjeggyel rendelkezik a tizedesvessző után. 
+
+(D) Az oszlop csak olyan 6-jegyű számokat képes tárolni, amelyek százasokra kerekítettek, azaz 2 nullára végződnek, pl. 1200.
+
 
 # 3. Relációs algebra
 
@@ -153,6 +162,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 1.9. B
 1.10. D
 
+2.1. C
 
 3.1. A
 
