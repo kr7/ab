@@ -257,6 +257,17 @@ delete from Aruk where cikkszam = '008';
 delete from Aruk;
 ```
 
+# Oszlop típusának megváltoztatása
+
+Változtassuk meg az "Aruk" tábla "ar" oszlopának típusát DECIMAL(5,2)-re: 
+
+```
+alter table Aruk modify ar decimal(5,2);
+```
+
+Mi a külöbség a FLOAT és a DECIMAL típus között? Ön melyik típust használná ebben az esetben?
+
+
 # Tranzakciók tábla normalizálása
 
 ```
