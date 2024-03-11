@@ -252,7 +252,7 @@ group by datum
 order by datum;
 ```
 
-Írjunk egy olyan kódot, amely megadja vevőnként a tranzakciók számát. Az eredménytáblában a vevő neve és a hozzá tartozó tranzakciók száma szerepeljen!
+Írjunk egy olyan lekérdezést, amely megadja vevőnként a tranzakciók számát. Az eredménytáblában a vevő neve és a hozzá tartozó tranzakciók száma szerepeljen!
 
 ```
 select nev, count(*) from
