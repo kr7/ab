@@ -231,7 +231,7 @@ select datum, count(*) from
 group by datum;
 ```
 
-Napi forgalom
+Napi bevétel
 
 ```
 select * from Tranzakciok;
@@ -251,6 +251,27 @@ where Aruk.cikkszam = termek) as tranzakciok_arakkal
 group by datum
 order by datum;
 ```
+
+Írjunk egy olyan kódot, amely megadja vevőnként a tranzakciók számát. Az eredménytáblában a vevő neve és a hozzá tartozó tranzakciók száma szerepeljen!
+
+```
+select nev, count(*) from
+	(select tranzakcio_id, min(nev) as nev
+	from Tranzakciok, Vasarlok
+	where Tranzakciok.vevo = Vasarlok.vasarlo_id
+	group by tranzakcio_id) tranzakcio_nev
+group by nev;
+
+select nev, tranzakciok_szama from Vasarlok,  
+	(select vevo, count(*) as tranzakciok_szama from
+		(select tranzakcio_id, min(vevo) as vevo 
+		from Tranzakciok
+		where vevo is not null
+		group by tranzakcio_id) as tranzakcio_id_vevo
+	group by vevo) as tranzakcioszamok_vevokoddal
+where tranzakcioszamok_vevokoddal.vevo = Vasarlok.vasarlo_id
+```
+A fenti két megoldás közül melyik "jobb"? Mi van, ha két különböző vásárlónak azonos a neve (Varga Béla)?
 
 # Adatok változtatása és törlése
 
