@@ -61,6 +61,13 @@ insert into Tranzakciok values ("T0008", "2024-02-11", "V01", "007", 35);
 insert into Tranzakciok values ("T0008", "2024-02-12", "V01", "007", 15);
 ```
 
+# Entitázs-relációs diagram
+
+Alább látható a fentiekben létehozott adatbázis entitázs-relációs diagramja. Figyelem: az adatbázis nincs normalizálva, a diagram aktuális állapota igyekszik minél pontosabban leképezni a fenti, normalizálatlan adatbázist. Külön entitázsnak tekinthetnénk a tranzakciókat és ekkor a *vásárol* reláció teremtene kapcsolatot a *vevők*, *áruk* és *tranzakciók* között.  
+
+![image](https://github.com/kr7/ab/assets/7807330/ca6b15e5-4e8c-4a32-8e84-b6a850ea3fb5)
+
+
 # A MySQL szerveren található adatbázisok listázása
 
 ```
@@ -276,7 +283,7 @@ create table tranzakciok_alapadatai
 
 ALTER TABLE tranzakciok_alapadatai ADD PRIMARY KEY (tranzakcio_id);
 
-create table tranzakcio_termekek as 
+create table vasarlas as 
 (select tranzakcio_id, termek, mennyiseg from tranzakciok); 
 
 drop table tranzakciok;
