@@ -337,7 +337,6 @@ public class Main {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con=DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/pekseg","krisztian","daniel");
-            //here sonoo is database name, root is username and password
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery("select vasarlo_id, nev, cim from Vasarlok");
             while(rs.next()) {
