@@ -6,7 +6,7 @@ Tekintsük az alábbi kódot, amelyben egyik számláról a másikra történő 
 create table szamlak 
   ( szamlaszam decimal(10),
     egyenleg decimal(8,2),
-    primary key (ugyfelkod) );
+    primary key (szamlaszam) );
     
 
 insert into szamlak values
