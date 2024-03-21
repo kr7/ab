@@ -296,6 +296,101 @@ alter table Aruk modify ar decimal(5,2);
 Mi a külöbség a FLOAT és a DECIMAL típus között? Ön melyik típust használná ebben az esetben?
 
 
+# Tárolt lekérdezések (más néven: nézettáblák, virtuális táblák, view-ok)
+
+"A lekérdezés eredményének használata egy másik lekérdezésben" c. részben szereplő utolsó feladatot megoldjuk nézettáblákkal is.
+
+A feladat "eredeti" megoldása az alábbi:
+
+```
+select nev, tranzakciok_szama from Vasarlok,  
+	(select vevo, count(*) as tranzakciok_szama from
+		(select tranzakcio_id, min(vevo) as vevo 
+		from Tranzakciok
+		where vevo is not null
+		group by tranzakcio_id) as tranzakcio_id_vevo
+	group by vevo) as tranzakcioszamok_vevokoddal
+where tranzakcioszamok_vevokoddal.vevo = Vasarlok.vasarlo_id
+```
+
+A megoldás nézettáblákkal: 
+
+```
+create view tranzakcio_id_vevo as 
+(select tranzakcio_id, min(vevo) as vevo 
+from Tranzakciok
+where vevo is not null
+group by tranzakcio_id);
+
+create view tranzakcioszamok_vevokoddal as
+(select vevo, count(*) as tranzakciok_szama
+from tranzakcio_id_vevo
+group by vevo);
+
+select nev, tranzakciok_szama from Vasarlok, tranzakcioszamok_vevokoddal
+where tranzakcioszamok_vevokoddal.vevo = Vasarlok.vasarlo_id;
+```
+
+Mi történik, ha a Tranzakciók tábla változása (példaként az alábbi, új tranzakció felvitele után) után újra kiadjuk az utolsó, Vasarlok és tranzakcioszamok_vevokoddal táblákra vonatkozó lekérdezést?   
+
+```
+insert into Tranzakciok values 
+('T0010','2024-03-18','V01','001',1)
+```
+
+Beszúrás nézettáblákba:
+
+```
+create view Aruk_alapadatai as
+(select cikkszam, megnevezes, ar from Aruk)
+
+create view DragaAruk as 
+(select cikkszam, megnevezes, ar from Aruk where ar > 1);
+
+select * from DragaAruk;
+insert into DragaAruk values ('008','pizza', 8.99);
+
+create view FelkilosAruk as
+(select cikkszam, megnevezes, ar from Aruk where tomeg = 500);
+
+insert into FelkilosAruk values 
+('020','Orias kakaoscsiga','15.00');
+```
+Melyik (nézet)táblába került az "Orias kakaoscsiga"? Aruk? Aruk_alapadatai? DragaAruk? FelkilosAruk?  
+
+
+Az "Orias kakaoscsiga" FelkilosArukból való "eltűnését" feloldhatjuk az alábbi módon:
+
+```
+drop view FelkilosAruk;
+
+create view FelkilosAruk as
+(select * from Aruk where tomeg = 500);
+ 
+select * from FelkilosAruk;
+
+insert into FelkilosAruk values 
+('021','Orias kakaoscsiga','500','15.00');
+```
+
+# Indexek
+
+```
+create index MegnevezesSzerintiIndex on Aruk(megnevezes);
+
+select * from Aruk where megnevezes = 'kifli';
+
+show columns from Aruk;
+
+drop index MegnevezesSzerintiIndex on Aruk;
+
+show columns from Aruk;
+```
+
+
+
+
+
 # Tranzakciók tábla normalizálása
 
 ```
