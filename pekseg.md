@@ -138,7 +138,7 @@ insert into furcsa_megnevezesek
 
 ```
 
-# Több táblára vonatkozó lekérdezések 
+# Több táblára vonatkozó lekérdezések, join
 
 A "T0001" azonosítójú tranzakció mellé "odaírjuk" a termék megnevezését illetve árát:
 
@@ -203,7 +203,46 @@ having vegosszeg > 5
 order by vegosszeg desc;
 ```
 
+
+Join
+
+```
+select Tranzakciok.*, Vasarlok.nev 
+from Tranzakciok, Vasarlok
+where Tranzakciok.vevo = Vasarlok.vasarlo_id;
+
+select Tranzakciok.*, Vasarlok.nev 
+from Tranzakciok JOIN Vasarlok
+on Tranzakciok.vevo = Vasarlok.vasarlo_id;
+
+select Tranzakciok.*, Vasarlok.nev 
+from Tranzakciok LEFT OUTER JOIN Vasarlok
+on Tranzakciok.vevo = Vasarlok.vasarlo_id;
+
+select Tranzakciok.*, Vasarlok.nev 
+from Tranzakciok RIGHT OUTER JOIN Vasarlok
+on Tranzakciok.vevo = Vasarlok.vasarlo_id;
+```
+
+# Union
+
+```
+select * from Tranzakciok where termek = '001';
+union
+select * from Tranzakciok where termek = '003';
+union
+select * from Tranzakciok where termek = '006';
+```
+
+
 # A lekérdezés eredményének használata egy másik lekérdezésben
+
+A Tranzakciok tábla azon sorainak lekérdezése, amelyek 'k'-val kezdődő megnevezésű termékekre vonatkoznak:
+
+```
+select * from Tranzakciok where termek in 
+(select cikkszam from Aruk where megnevezes like "k%");
+```
 
 A vevők összes költésének lekérdezése:
 
