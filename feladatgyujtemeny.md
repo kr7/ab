@@ -170,7 +170,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) select * from arucikk where ar > 1000 union select * from arucikk where ar < 2000
 
 
-**2.4. Adott egy termékek adatait tartalmazó, "arucikk" elnevezésű adattábla, amelynek "ar" oszlopában tartjuk nyilván az egyes termékek árait. Mit eredményez az alábbi lekérdezés?**
+**2.5. Adott egy termékek adatait tartalmazó, "arucikk" elnevezésű adattábla, amelynek "ar" oszlopában tartjuk nyilván az egyes termékek árait. Mit eredményez az alábbi lekérdezés?**
 
 **select * from arucikk where ar > 1000 union select * from arucikk where ar < 2000**
 
@@ -183,7 +183,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Azon termékeket tartalmazó adattánlát, amelyek ára 2000 Ft-nál kisebb.
 
 
-**2.5. Adott egy repülőjáratokat tartalmazó *jaratok* elnevezesű adattábla, mely az alábbi oszlopokkal rendelkezik: (i) *jaratszam*, (ii) *honnan*: kiindulási reptér, (iii) *hova*: érkezési reptér, (iv) *indulas*: indulás időpontja (datetime), (v) *erkezes*: érkezés időpontja (datetime). Kérdezze le azon városok listáját, ahová (eszerint az adatázis szerint) Budapestről valaha repült járat, egy város csak egyszer szerepeljen az eredményként kapott listában!**
+**2.6. Adott egy repülőjáratokat tartalmazó *jaratok* elnevezesű adattábla, mely az alábbi oszlopokkal rendelkezik: (i) *jaratszam*, (ii) *honnan*: kiindulási reptér, (iii) *hova*: érkezési reptér, (iv) *indulas*: indulás időpontja (datetime), (v) *erkezes*: érkezés időpontja (datetime). Kérdezze le azon városok listáját, ahová (eszerint az adatázis szerint) Budapestről valaha repült járat, egy város csak egyszer szerepeljen az eredményként kapott listában!**
 
 (A) select honnan from jaratok where hova = "Budapest"
 
@@ -192,6 +192,17 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (C) select distinct honnan from jaratok where hova = "Budapest"
 
 (D) select distinct hova from jaratok where honnan = "Budapest"
+
+
+**2.7. Adott egy repülőjáratokat tartalmazó *jaratok* elnevezesű adattábla, mely az alábbi oszlopokkal rendelkezik: (i) *jaratszam*, (ii) *honnan*: kiindulási reptér, (iii) *hova*: érkezési reptér, (iv) *indulas*: indulás időpontja (datetime), (v) *erkezes*: érkezés időpontja (datetime). Ez a tábla az indulási és érkezési reptereket a légi forgalomban szokásos 3 betűs kódokkal (pl. BUD = Budapest, CLJ = Kolozsvár, stb.) tartalmazza. Adott egy másik tábla, amely a repterek kódjai és a városnevek közötti kapcsolatokat tartalmazza, ennek elnevezése *varosok* és két oszlopa van: (i) *kod*, (ii) *varosnev*. Kérdezze le azon városok listáját, ahová (eszerint az adatázis szerint) Budapestről valaha repült járat, egy város csak egyszer szerepeljen az eredményként kapott listában, de a városokat a hétköznapi megnevezéssel adja meg, ne a kódjaikkal!**
+
+(A) select distinct varosok.varosnev from jaratok, varosok where jaratok.honnan = "Budapest" and jaratok.hova = varosok.kod
+
+(B) select distinct varosok.varosnev from jaratok, varosok where jaratok.honnan = "BUD" and jaratok.hova = varosok.kod
+
+(C) select distinct varosok.varosnev from jaratok, varosok where jaratok.honnan = "BUD" or jaratok.hova = varosok.kod
+
+(D) select distinct varosok.varosnev from jaratok, varosok where jaratok.honnan = "Budapest" or jaratok.hova = varosok.kod
 
  
 
@@ -224,7 +235,9 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.2. A
 2.3. B
 2.4. B
-2.5. D
+2.5. A
+2.6. D
+2.7. B
 
 3.1. A
 
