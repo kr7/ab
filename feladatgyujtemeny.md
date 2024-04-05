@@ -204,7 +204,59 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 (D) select distinct varosok.varosnev from jaratok, varosok where jaratok.honnan = "Budapest" or jaratok.hova = varosok.kod
 
- 
+
+**2.8. Adott egy termékek adatait tartalmazó, "arucikk" elnevezésű adattábla, amelynek "ar" oszlopában tartjuk nyilván az egyes termékek árait. Mely termékeket fogja duplán tartalmazni az alábbi lekérdezés eredményeként kapott tábla?**
+
+**select * from arucikk where ar > 1000 union select * from arucikk where ar < 2000**
+
+(A) Az összes terméket. 
+
+(B) Azon termékeket, amelyek ára 1000 Ft és 2000 Ft közötti.
+
+(C) Egyetlen terméket sem fog duplán tartalmazni.
+
+(D) Az 1000 Ft-nál nagyobb árú és 2000 Ft-nál kisebb árú termékek közül egy véletlenszerűen választottat.
+
+
+**2.9. Adott egy termékek adatait tartalmazó, "arucikk" elnevezésű adattábla, amelynek "ar" oszlopában tartjuk nyilván az egyes termékek árait. Mely termékeket fogja duplán tartalmazni az alábbi lekérdezés eredményeként kapott tábla?**
+
+**select distinct * from arucikk where ar > 1000 union select distinct * from arucikk where ar < 2000**
+
+(A) Az összes terméket. 
+
+(B) Azon termékeket, amelyek ára 1000 Ft és 2000 Ft közötti.
+
+(C) Egyetlen terméket sem fog duplán tartalmazni.
+
+(D) Az 1000 Ft-nál nagyobb árú és 2000 Ft-nál kisebb árú termékek közül egy véletlenszerűen választottat.
+
+
+**2.10. Adott egy termékek adatait tartalmazó, "arucikk" elnevezésű adattábla, amelynek "ar" oszlopában tartjuk nyilván az egyes termékek árait. Mely termékeket fogja duplán tartalmazni az alábbi lekérdezés eredményeként kapott tábla?**
+
+**select distinct * from (select distinct * from arucikk where ar > 1000 union select distinct * from arucikk where ar < 2000) as belso_tabla**
+
+(A) Az összes terméket. 
+
+(B) Azon termékeket, amelyek ára 1000 Ft és 2000 Ft közötti.
+
+(C) Egyetlen terméket sem fog duplán tartalmazni.
+
+(D) Az 1000 Ft-nál nagyobb árú és 2000 Ft-nál kisebb árú termékek közül egy véletlenszerűen választottat.
+
+
+**2.11. Adott egy termékek adatait tartalmazó, "arucikk" elnevezésű adattábla, amelynek "ar" oszlopában tartjuk nyilván az egyes termékek árait. Mely termékeket fogja duplán tartalmazni az alábbi lekérdezés eredményeként kapott tábla?**
+
+**select distinct * from (select * from arucikk where ar > 1000 union select * from arucikk where ar < 2000) as belso_tabla**
+
+(A) Az összes terméket. 
+
+(B) Azon termékeket, amelyek ára 1000 Ft és 2000 Ft közötti.
+
+(C) Egyetlen terméket sem fog duplán tartalmazni.
+
+(D) Az 1000 Ft-nál nagyobb árú és 2000 Ft-nál kisebb árú termékek közül egy véletlenszerűen választottat.
+
+
 
 # 3. Relációs algebra
 
@@ -238,6 +290,10 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.5. A
 2.6. D
 2.7. B
+2.8. B
+2.9. B
+2.10. C
+2.11. C
 
 3.1. A
 
