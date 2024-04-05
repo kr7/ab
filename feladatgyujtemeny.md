@@ -159,6 +159,42 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Az UPDATE utasítással az oszlopok típusát régebbi típusokról lehet újabb, modernebb típusokra változtatni; az ALTER-rel a újabb típusok változtathatók régebbiekre.
 
 
+**2.4. Adott egy termékek adatait tartalmazó, "arucikk" elnevezésű adattábla, melyből ki szeretné választani az 1000 Ft és 2000 Ft közötti árú termékeket és az eredménytáblában meg szeretné jeleníteni az ezen termékekről nyilvántartott összes információt. Az alábbiak közül melyik lekérdezést használná ehhez?**
+
+(A) select * from aruk where ar > 1000 and ar < 2000
+
+(B) select * from arucikk where ar > 1000 and ar < 2000
+
+(C) select megnevezes, cikkszam, ar from arucikk where ar > 1000 and ar < 2000 
+
+(D) select * from arucikk where ar > 1000 union select * from arucikk where ar < 2000
+
+
+**2.4. Adott egy termékek adatait tartalmazó, "arucikk" elnevezésű adattábla, amelynek "ar" oszlopában tartjuk nyilván az egyes termékek árait. Mit eredményez az alábbi lekérdezés?**
+
+**select * from arucikk where ar > 1000 union select * from arucikk where ar < 2000**
+
+(A) Az összes terméket tartalmazó adattáblát, amelyben néhány termék akár kétszer is szerepelhet.
+
+(B) Azon termékeket tartalmazó adattáblát, amelyek ára 1000 Ft és 2000 Ft közötti.
+
+(C) Azon termékeket tartalmazó adattáblát, amelyek ára 1000 Ft-nál nagyobb.
+
+(D) Azon termékeket tartalmazó adattánlát, amelyek ára 2000 Ft-nál kisebb.
+
+
+**2.5. Adott egy repülőjáratokat tartalmazó *jaratok* elnevezesű adattábla, mely az alábbi oszlopokkal rendelkezik: (i) *jaratszam*, (ii) *honnan*: kiindulási reptér, (iii) *hova*: érkezési reptér, (iv) *indulas*: indulás időpontja (datetime), (v) *erkezes*: érkezés időpontja (datetime). Kérdezze le azon városok listáját, ahová (eszerint az adatázis szerint) Budapestről valaha repült járat, egy város csak egyszer szerepeljen az eredményként kapott listában!**
+
+(A) select honnan from jaratok where hova = "Budapest"
+
+(B) select hova from jaratok where honnan = "Budapest"
+
+(C) select distinct honnan from jaratok where hova = "Budapest"
+
+(D) select distinct hova from jaratok where honnan = "Budapest"
+
+ 
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -187,6 +223,8 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.1. C
 2.2. A
 2.3. B
+2.4. B
+2.5. D
 
 3.1. A
 
