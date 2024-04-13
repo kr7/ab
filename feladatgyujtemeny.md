@@ -257,6 +257,71 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Az 1000 Ft-nál nagyobb árú és 2000 Ft-nál kisebb árú termékek közül egy véletlenszerűen választottat.
 
 
+**2.12. Mit értünk idegen kulcs alatt?**
+
+(A) Egy külföldi felhasználó által birtokolt jelszót, amellyel hozzáférhet az adatbázishoz.
+
+(B) Egy adattábla olyan oszlopát (vagy oszlopait), amely(ek)ben tárolt értékekkel egy másik adattábla sorait egyedileg azonosítani tudjuk.
+
+(C) Egy adattábla olyan oszlopát, amelyben minden sor esetében egyedi érték szerepel, és ezért segítségével az adattábla sorai egyedileg azonosíthatók.
+
+(D) Az adattábla olyan sorát, amelyben minden cella értéke különböző.
+
+
+**2.13. Mit értünk kulcs alatt?**
+
+(A) Egy külföldi felhasználó által birtokolt jelszót, amellyel hozzáférhet az adatbázishoz.
+
+(B) Egy adattábla olyan oszlopát (vagy oszlopait), amely(ek)ben tárolt értékekkel egy másik adattábla sorait egyedileg azonosítani tudjuk.
+
+(C) Egy adattábla olyan oszlopát, amelyben minden sor esetében egyedi érték szerepel, és ezért segítségével az adattábla sorai egyedileg azonosíthatók.
+
+(D) Az adattábla olyan sorát, amelyben minden cella értéke különböző.
+
+
+**2.14. SELECT ... lekérdezésekben milyen kulcsó után adhatjuk meg, hogy az adattábla melyik sorait kívánjuk lekérdezni?**
+
+(A) FROM
+
+(B) WHERE
+
+(C) ORDER BY
+
+(D) GROUP BY
+
+
+**2.15. SELECT ... lekérdezésekben milyen kulcsó után adhatjuk meg, hogy melyik adattáblából kívánunk lekérdezni adatokat?**
+
+(A) FROM
+
+(B) WHERE
+
+(C) ORDER BY
+
+(D) GROUP BY
+
+
+**2.16. SELECT ... lekérdezésekben milyen kulcsó után adhatjuk meg, hogy melyik oszlop szerint kívánunk rendezni a lekérdezett adatokat?**
+
+(A) FROM
+
+(B) WHERE
+
+(C) ORDER BY
+
+(D) GROUP BY
+
+
+**2.17. Az alábbiak közül melyik nem aggregációs függvény?**
+
+(A) SUM
+
+(B) AVG
+
+(C) MIN
+
+(D) ROUND
+
 
 # 3. Relációs algebra
 
@@ -269,6 +334,40 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (C) Al Dzsazíra
 
 (D) Aladdin
+
+
+**3.2. Mit nevezünk algebrának?**
+
+(A) A matematika műveletekkel ellátott halmazokkal foglalkozó területét.
+
+(B) Al-Hvárizmi munkásságának feldolgozásával foglalkozó tudományterületet.
+
+(C) Egész számok összeadását.
+
+(D) Az adattáblák oszlopainak típusait.
+
+
+**3.3. Miért nevezzük *relációnak* az adattáblákat?**
+
+(A) Mert párkapcsolati állapotra vonatkozó információkat tárolhatunk bennük.
+
+(B) Mert az egyes oszlopok értelmezési tartománya, mint halmaz között teremtenek kapcsolatot.
+
+(C) Mert relációsjelekkel leírhatóak az adattáblán végzett műveletek (pl. táblák sorainak párosítása).
+
+(D) Mert az idegen kulcsok kapcsolatot teremtenek különböző adattáblák között.
+
+
+**3.4. Mit nevezünk *relációnak*?**
+
+(A) Az adattáblák tárolására használt eszközt (pl. mágneslemez vagy SSD).
+
+(B) Az adattáblák oszlopait.
+
+(C) Az adattáblák oszlopainak értelmezési tartományait.
+
+(D) Az adattáblát.
+
 
 # Megoldások
 
@@ -294,7 +393,16 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.9. B
 2.10. C
 2.11. C
+2.12. B
+2.13. C
+2.14. B
+2.15. A
+2.16. C
+2.17. D
 
 3.1. A
+3.2. A
+3.3. B
+3.4. D
 
 ...nemsokára itt lesznek az első kérdések megoldásai...
