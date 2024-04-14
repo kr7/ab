@@ -349,6 +349,28 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) SELECT DIFFERENT * FROM UGYFEL
 
 
+**2.20. Melyik utasítással lehet nézettáblát (más néven: virtuális tábla, tárolt lekérdezés) létrehozni?**
+
+(A) CREATE VIEW [nézettábla neve] AS [lekérdezés]
+
+(B) MAKE VIEW [nézettábla neve] AS [lekérdezés]
+
+(C) CONSTRUCT VIEW [nézettábla neve] AS [lekérdezés]
+
+(D) INITIALIZE VIEW [nézettábla neve] AS [lekérdezés]
+
+
+**2.21. Melyik utasítással lehet nézettáblát (más néven: virtuális tábla, tárolt lekérdezés) eltörölni?**
+
+(A) DELETE VIEW [nézettábla neve]
+
+(B) DROP VIEW [nézettábla neve]
+
+(C) DESTRUCT VIEW [nézettábla neve]
+
+(D) ERASE VIEW [nézettábla neve]
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -427,6 +449,8 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.17. D
 2.18. B
 2.19. C
+2.20. A
+2.21. B
 
 
 3.1. A
