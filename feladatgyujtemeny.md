@@ -403,7 +403,16 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 (D) SELECT NEV, NEPTUN FROM HALLGATOK WHERE NEV LIKE "\*Péter\*"
 
- 
+
+**2.25. A lekérdezésünk egy túlságosan nagy adattáblát eredményez, ugyakkor valójában csak az adattábla első néhány sorára van szükségünk. Milyen kulcsszó használatával érhető el az eredménytábla első 15 sorra történő korlátozása?**
+
+(A) RESTRICT 15
+
+(B) HEAD 15
+
+(C) LIMIT 15
+
+(D) AT MOST 15 RECORDS
 
 
 
