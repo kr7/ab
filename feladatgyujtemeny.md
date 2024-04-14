@@ -556,6 +556,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.22. B
 2.23. B
 2.24. C
+2.25. C
 
 
 3.1. A
