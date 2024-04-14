@@ -444,6 +444,28 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (C) ... az adattáblába történő beszúrás (insert into) végrehajtási ideje növekszik.
 
 
+**2.29. Az UGYFELEK adattáblát indexálni szeretné NEV oszlop szerint. Melyik utasítást használja?**
+
+(A) DEFINE INDEX NEV_SZERINTI_INDEX FOR UGYFELEK(NEV)
+
+(B) CREATE INDEX NEV_SZERINTI_INDEX FOR UGYFELEK(NEV)
+
+(C) DEFINE INDEX NEV_SZERINTI_INDEX ON UGYFELEK(NEV)
+
+(D) CREATE INDEX NEV_SZERINTI_INDEX ON UGYFELEK(NEV)
+
+
+**2.30. Hogyan tudja az előbbi feladatban létrehozott indexet eltörölni?**
+
+(A) DELETE INDEX NEV_SZERINTI_INDEX FOR UGYFELEK
+
+(B) DROP INDEX NEV_SZERINTI_INDEX FOR UGYFELEK
+
+(C) DELETE INDEX NEV_SZERINTI_INDEX ON UGYFELEK
+
+(D) DROP INDEX NEV_SZERINTI_INDEX ON UGYFELEK
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -588,12 +610,16 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.26. A
 2.27. A
 2.28. C
+2.29. D
+2.30. D
+
 
 3.1. A
 3.2. A
 3.3. B
 3.4. D
 3.5. B
+
 
 4.1. A
 4.2. C
