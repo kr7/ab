@@ -338,6 +338,16 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Az első megszámolja a tábla sorait, a második hibát ad.
 
 
+**2.19. Egy hiba folytán néhány ügyfél többször is belekerült az UGYFEL adattáblába (pontosan ugyanazon adatokkal). Az alábbiak közül melyik lekérdezéssel tudja lekérdezni a különböző ügyfeleket?**
+
+(A) SELECT UNIQUE * FROM UGYFEL
+
+(B) SELECT DISJOINT * FROM UGYFEL
+
+(C) SELECT DISTINCT * FROM UGYFEL
+
+(D) SELECT DIFFERENT * FROM UGYFEL
+
 
 # 3. Relációs algebra
 
@@ -416,6 +426,8 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.16. C
 2.17. D
 2.18. B
+2.19. C
+
 
 3.1. A
 3.2. A
