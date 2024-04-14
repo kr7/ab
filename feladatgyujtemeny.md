@@ -462,6 +462,17 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Az adattáblát.
 
 
+**3.5. A relációs algebra...**
+
+(A) ... a matematika párkapcsolatok szimulációjával foglalkozó területe.
+
+(B) ... az SQL elméleti háttere.
+
+(C) ... az adattáblákat rendező algoritmusok hatékony implementálásának technikája.
+
+(D) ... az adattáblákban hatékony keresést lehetővé tevő technika.
+
+
 # 4. Egyed-kapcsolat modellezés, egyed-kapcsolat diagramok
 
 **4.1. Mit jelölünk téglalappal az egyed-kapcsolat diagramokon?**
@@ -474,6 +485,38 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 (D) A kulcsokat
 
+
+**4.2. Mit jelölünk ellipszissel az egyed-kapcsolat diagramokon?**
+
+(A) Az egyedeket
+
+(B) A kapcsolatokat
+
+(C) Az attribútumokat
+
+(D) A kulcsokat
+
+
+**4.3. Mit jelölünk rombusszal az egyed-kapcsolat diagramokon?**
+
+(A) Az egyedeket
+
+(B) A kapcsolatokat
+
+(C) Az attribútumokat
+
+(D) A kulcsokat
+
+
+**4.4. Mit jelölünk aláhúzással az egyed-kapcsolat diagramokon?**
+
+(A) Az egyedeket
+
+(B) A kapcsolatokat
+
+(C) Az attribútumokat
+
+(D) A kulcsokat
 
 
 # Megoldások
@@ -519,6 +562,9 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 3.2. A
 3.3. B
 3.4. D
+3.5. B
 
 4.1. A
-
+4.2. C
+4.3. B
+4.4. D
