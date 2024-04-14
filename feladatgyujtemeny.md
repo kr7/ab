@@ -393,7 +393,17 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Semmi (nem kapunk hibaüzenetet, de a rekord nem is kerül be egy táblába sem).
 
 
+**2.24. Le szeretné kérdezni egy adattáblából azon hallgatók nevét egy neptun kódját, akiknek egyik keresztneve Péter. A teljes nevet egy oszlopban tároljuk. Melyik lekérdezést használja? (Féltételezheti, hogy az adattábla és a lekérdezésben hivatkozott oszlopok léteznek.)**
 
+(A) SELECT NEV, NEPTUN FROM HALLGATOK WHERE NEV = "%Péter%"
+
+(B) SELECT NEV, NEPTUN FROM HALLGATOK WHERE NEV is "%Péter%"
+
+(C) SELECT NEV, NEPTUN FROM HALLGATOK WHERE NEV LIKE "%Péter%"
+
+(D) SELECT NEV, NEPTUN FROM HALLGATOK WHERE NEV LIKE "\*Péter\*"
+
+ 
 
 
 
@@ -443,6 +453,20 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Az adattáblát.
 
 
+# 4. Egyed-kapcsolat modellezés, egyed-kapcsolat diagramok
+
+**4.1. Mit jelölünk téglalappal az egyed-kapcsolat diagramokon?**
+
+(A) Az egyedeket
+
+(B) A kapcsolatokat
+
+(C) Az attribútumokat
+
+(D) A kulcsokat
+
+
+
 # Megoldások
 
 1.1. C
@@ -479,6 +503,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.21. B
 2.22. B
 2.23. B
+2.24. C
 
 
 3.1. A
@@ -486,4 +511,5 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 3.3. B
 3.4. D
 
-...nemsokára itt lesznek az első kérdések megoldásai...
+4.1. A
+
