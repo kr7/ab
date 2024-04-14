@@ -415,6 +415,34 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) AT MOST 15 RECORDS
 
 
+**2.26. Mire használjuk az indexeket?**
+
+(A) Adott oszlop szerinti keresés (lekérdezés) felgyorsítására.
+
+(B) Az adatok tömörítésére.
+
+(C) Az adatok titkosítására.
+
+(D) Az adatokhoz való hozzáférés szabályozására.
+
+
+**2.27. Tegyük fel, hogy az UGYFELEK adattáblát indexáltuk a NEV oszlop szerint. Ennek hatására...**
+
+(A) ... a NEV szerinti keresés (NEV oszlopra vonatkozó lekérdezések) végrehajtási ideje csökken.
+
+(B) ... a NEV szerinti keresés (NEV oszlopra vonatkozó lekérdezések) végrehajtási ideje nem változik.
+
+(C) ... a NEV szerinti keresés (NEV oszlopra vonatkozó lekérdezések) végrehajtási ideje növekszik.
+
+
+**2.28. Tegyük fel, hogy az UGYFELEK adattáblát indexáltuk a NEV oszlop szerint. Ennek hatására...**
+
+(A) ... az adattáblába történő beszúrás (insert into) végrehajtási ideje csökken.
+
+(B) ... az adattáblába történő beszúrás (insert into) végrehajtási ideje nem változik.
+
+(C) ... az adattáblába történő beszúrás (insert into) végrehajtási ideje növekszik.
+
 
 # 3. Relációs algebra
 
@@ -557,7 +585,9 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.23. B
 2.24. C
 2.25. C
-
+2.26. A
+2.27. A
+2.28. C
 
 3.1. A
 3.2. A
