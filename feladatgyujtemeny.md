@@ -569,6 +569,72 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) A kulcsokat
 
 
+**4.5. Amennyiben az egyed-kapcsolat diagramon, egy egyedhalmaz több attribútumát is aláhúzással jelöltük, ennek a jelentése, hogy...**
+
+(A) Minden aláhúzott attribútum külön-külön egy-egy kulcs.
+
+(B) Az aláhúzott attribútumok együttesen alkotnak egy kulcsot.
+
+(C) Az adattáblát minden egyes aláhúzott attribútum szerint külön-külön indexáltuk.
+
+(D) Az aláhúzott attribútumok különösen fontosak az alkalmazás szempontjából, az adatbázis létrehozása során beállítjuk, hogy nem törölhetőek.
+
+
+**4.6. Hogyan jelöljük az egyed-kapcsolat diagramokon az idegen kulcsot?**
+
+(A) Szagatott aláhúzással.
+
+(B) Dőlt betűvel.
+
+(C) Duplán keretezett ellipszissel.
+
+(D) Sehogy.
+
+
+**4.7. Hogyan jelöljük az egyed-kapcsolat diagramokon az indexeket?**
+
+(A) Szagatott aláhúzással.
+
+(B) Dőlt betűvel.
+
+(C) Duplán keretezett ellipszissel.
+
+(D) Sehogy.
+
+
+**4.8. Mit jelölünk az egyed-kapcsolat diagramon duplán keretezett ellipszissel?**
+
+(A) A kitüntetett jelentőségű attribútumokat.
+
+(B) A többszörös értékű attribútumokat.
+
+(C) A kitüntetett jelentőségű egyedhalmazokat.
+
+(D) A gyenge egyedhalmazokat.
+
+
+**4.9. Mit jelölünk az egyed-kapcsolat diagramon duplán keretezett téglalappal?**
+
+(A) A kitüntetett jelentőségű attribútumokat.
+
+(B) A többszörös értékű attribútumokat.
+
+(C) A kitüntetett jelentőségű egyedhalmazokat.
+
+(D) A gyenge egyedhalmazokat.
+
+
+**4.10. Hogyan fordítaná szakszerűen az *entitázs* kifejezést?**
+
+(A) Izé
+
+(B) Képtár vagy múzeum
+
+(C) Egyedhalmaz
+
+(D) Adattábla
+
+
 # Megoldások
 
 1.1. C
@@ -625,3 +691,9 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 4.2. C
 4.3. B
 4.4. D
+4.5. B
+4.6. D
+4.7. D
+4.8. B
+4.9. D
+4.10. C
