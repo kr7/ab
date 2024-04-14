@@ -323,6 +323,22 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) ROUND
 
 
+**2.18. Adott egy *Aruk* elnevezésű adattábla, amely tartalmaz egy megnevezés oszlopot. Mi a különbség az alábbi két lekérdezés között?**
+
+(1) SELECT COUNT(*) FROM ARUK
+
+(2) SELECT COUNT(MEGNEVEZES) FROM ARUK
+
+(A) Semmi, ugyanazt az eredményt adják.
+
+(B) Az első megszámolja a tábla sorait, a második pedig azokat a sorokat számolja meg, ahol a MEGNEVEZES mező kitöltött (azaz nem hiányzó érték).
+
+(C) A második megszámolja a tábla sorait, az első pedig azokat a sorokat számolja meg, ahol a MEGNEVEZES mező kitöltött (azaz nem hiányzó érték).
+
+(D) Az első megszámolja a tábla sorait, a második hibát ad.
+
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -399,6 +415,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.15. A
 2.16. C
 2.17. D
+2.18. B
 
 3.1. A
 3.2. A
