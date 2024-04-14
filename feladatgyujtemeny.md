@@ -371,6 +371,32 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) ERASE VIEW [nézettábla neve]
 
 
+**2.22. Melyik utasítással lehet egy táblát eltörölni?**
+
+(A) DELETE TABLE [nézettábla neve]
+
+(B) DROP TABLE [nézettábla neve]
+
+(C) DESTRUCT TABLE [nézettábla neve]
+
+(D) ERASE TABLE [nézettábla neve]
+
+
+**2.23. Mi történik, amikor insert into-val egy új rekordot próbálunk beszúrni egy nézettáblába?**
+
+(A) Hibaüzenetet kapunk.
+
+(B) Amennyiben a beszúrás visszavezethető az eredeti táblába (amelyre vonatkozóan a nézettáblát létrehoztuk) történő beszúrásra, akkor az új rekord az eredeti táblába kerül beszúrásra.
+
+(C) Az új rekord bekerül a nézettáblába, de az eredeti táblába nem.
+
+(D) Semmi (nem kapunk hibaüzenetet, de a rekord nem is kerül be egy táblába sem).
+
+
+
+
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -451,6 +477,8 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.19. C
 2.20. A
 2.21. B
+2.22. B
+2.23. B
 
 
 3.1. A
