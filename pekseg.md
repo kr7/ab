@@ -463,32 +463,48 @@ create table Varosok (
 
 Java:
 ```
+package mysqleleres;
 import java.sql.*;
-public class Main {
+
+public class MySQLEleres {  
     public static void main(String[] args) {
-        System.out.println("Hello World' :-)");
-        try{
+        System.out.println("Hello World :-)");
+        try { 
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con=DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/pekseg","krisztian","daniel");
+                "jdbc:mysql://localhost:3306/pekseg","hallgato","h411gato");
+            
             Statement stmt=con.createStatement();
-            ResultSet rs=stmt.executeQuery("select vasarlo_id, nev, cim from Vasarlok");
+            ResultSet rs=stmt.executeQuery(
+                    "select vasarlo_id, nev, cim from Vasarlok");
             while(rs.next()) {
                 String vasarlo_id = rs.getString(1);
                 String nev = rs.getString(2);
                 String cim = rs.getString(3);
+                
+                System.out.println(vasarlo_id+" | "+nev+" | "+cim);
+                
                 String irsz = cim.substring(0,4);
-                String varosnev = cim.substring(5, cim.indexOf(","));
-                String utca_hsz = cim.substring(cim.indexOf(",")+1).trim();
-
-                System.out.println(vasarlo_id+"|"+nev+"|"+irsz+"|"+varosnev+"|"+utca_hsz);
-
+                String varos = cim.substring(5, cim.indexOf(','));
+                String utca_hsz = cim.substring(cim.indexOf(',')+2);
+                
+                System.out.println(" --> "+irsz+";"+varos+";"+utca_hsz+";");
+                
+                String sql1 = "insert into Varosok values (\""+irsz+"\", \""+varos+"\")";
+                String sql2 = "insert into Vasarlok1 values "+
+                  "(\""+vasarlo_id+"\", \""+nev+"\", \""+irsz+"\", \""+utca_hsz+"\")";
+                
+                System.out.println(sql1);
+                System.out.println(sql2);
+                
                 stmt=con.createStatement();
-                stmt.executeUpdate("insert into Varosok values (\""+irsz+"\",\""+varosnev+"\")");
-                stmt.executeUpdate("insert into Vasarlok1 values (\""+vasarlo_id+"\",\""+nev+"\",\""+irsz+"\",\""+utca_hsz+"\")");
+                stmt.executeUpdate(sql1);
+                stmt.executeUpdate(sql2);
             }
             con.close();
-        }catch(Exception e){ System.out.println(e);}
+        } catch (Exception e) {
+            System.out.println(e);
+        }   
     }
 }
 ```
