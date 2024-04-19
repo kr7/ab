@@ -466,6 +466,19 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) DROP INDEX NEV_SZERINTI_INDEX ON UGYFELEK
 
 
+**2.31. Mi történik az alábbi utasítás hatására, ha nem "safe" módban használjuk a MySQL-t?**
+
+**DELETE FROM ARUK**
+
+(A) Hibaüzenetet kapunk.
+
+(B) Eltöröljük az ARUK adattáblát.
+
+(C) Az összes sort kitöröljük az ARUK adattáblából, de magát a táblát nem töröljük el.
+
+(D) Az ARUK tábla első sorát kitöröljük.
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -678,6 +691,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.28. C
 2.29. D
 2.30. D
+2.31. C
 
 
 3.1. A
