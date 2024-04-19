@@ -465,7 +465,7 @@ Java:
 ```
 package mysql_hozzaferes;
 import java.sql.*;
-public class PentekDelutaniMySQLHozzaferes {
+public class MySQLHozzaferes {
     public static void main(String[] args) {       
         try ( Connection con=DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/pekseg","hallgato","h411gato"); 
