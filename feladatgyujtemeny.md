@@ -490,6 +490,17 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) ...kifejezetten a randik (angolul: date) időpontjának tárolására használatos.
 
 
+**2.33. Mit eredményez a MAX aggregációs függvény szöveges adatokra alkalmazva?**
+
+(A) Hibaüzenetet, mert csak számokra értelmezett.
+
+(B) Az adott oszlop ÁBC sorrend szerinti utolsó elemét.
+
+(C) Az adott oszlop elemeinek számát.
+
+(D) Nullát.
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -704,6 +715,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.30. D
 2.31. C
 2.32. A
+2.33. B
 
 
 3.1. A
