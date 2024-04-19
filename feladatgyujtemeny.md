@@ -479,6 +479,17 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Az ARUK tábla első sorát kitöröljük.
 
 
+**2.32. A DATETIME típusú adat...**
+
+(A) ...dátumot és időt tárol
+
+(B) ...dátumot vagy időt tárol, de egyszerre csak egyiket, nem mind a kettőt
+
+(C) ...azt tárolja, hogy egy dátum melyik időzóna szerint értendő
+
+(D) ...kifejezetten a randik (angolul: date) időpontjának tárolására használatos.
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -692,6 +703,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.29. D
 2.30. D
 2.31. C
+2.32. A
 
 
 3.1. A
