@@ -463,48 +463,48 @@ create table Varosok (
 
 Java:
 ```
-package vasarloknormalizalasa;
+package mysql_hozzaferes;
 import java.sql.*;
-public class VasarlokNormalizalasa {
-    public static void main(String[] args) {
-        System.out.println("Hello World :-)");
+public class PentekDelutaniMySQLHozzaferes {
+    public static void main(String[] args) {       
         try ( Connection con=DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/pekseg","hallgato","h411gato"); 
               Statement stmt=con.createStatement();
               ResultSet rs=stmt.executeQuery(
                     "select vasarlo_id, nev, cim from Vasarlok") ) 
         {
-            Class.forName("com.mysql.cj.jdbc.Driver");
             while (rs.next()) {
                 String vasarlo_id = rs.getString(1);
                 String nev = rs.getString(2);
                 String cim = rs.getString(3);
                 
-                System.out.println(vasarlo_id+" | "+nev+" | "+cim);
+                System.out.println(vasarlo_id+"|"+nev+"|"+cim);
                 
-                String irsz = cim.substring(0, 4);
+                String irsz = cim.substring(0,4);
                 String varos = cim.substring(5, cim.indexOf(','));
                 String utca_hsz = cim.substring(cim.indexOf(',')+2);
                 
                 System.out.println(" --> "+irsz+";"+varos+";"+utca_hsz);
                 
-                String sql1 = "insert into Varosok values (\""+irsz+"\", \""+varos+"\")";
+                String sql1 = "insert into Varosok values (\""+irsz+"\",\""+varos+"\") ";
                 String sql2 = "insert into Vasarlok1 values "+
-                        "(\""+vasarlo_id+"\", \""+nev+"\", \""+irsz+"\", \""+utca_hsz+"\")";
+                        "(\""+vasarlo_id+"\",\""+nev+"\", \""+irsz+"\", \""+utca_hsz+"\") ";
+                
                 System.out.println(sql1);
                 System.out.println(sql2);
                 
                 try (Statement stmt2=con.createStatement())
                 {
                     stmt2.executeUpdate(sql1);
-                    stmt2.executeUpdate(sql2);   
+                    stmt2.executeUpdate(sql2);
                 } catch (Exception e) {
-                    System.out.println(e);
-                }
+                    e.printStackTrace();                
+                }               
             }
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
-    }   
+    }    
 }
+
 ```
