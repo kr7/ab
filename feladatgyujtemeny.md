@@ -534,6 +534,42 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) ROLLBACK
 
 
+**2.37. Adott az alábbi, HALLGATOK elnevezésű adattábla:**
+
+| Név     | Neptun   | Matek   | Fizika | Info |
+|---------|----------|---------|--------|------|
+| Anna    | ABC012   |   5     |   4    |  5   |
+| Péter   | DEF345   |   4     |   3    |  5   |
+| Kata    | GHI678   |   3     |   4    |  3   |
+
+**Mely hallgatók adatait adja vissza az alábbi lekérdezés?**
+
+**SELECT * FROM HALLGATOK WHERE MATEK > 3 and FIZIKA > 3**
+
+(A) Anna, Péter, Kata
+
+(B) Anna, Péter
+
+(C) Péter, Kata
+
+(D) Anna
+
+
+**2.38. Az előbbi adattáblából mely hallgatók adatait adja vissza az alábbi lekérdezés?**
+
+**SELECT * FROM HALLGATOK WHERE MATEK > 3 OR FIZIKA > 3**
+
+(A) Anna, Péter, Kata
+
+(B) Anna, Péter
+
+(C) Péter, Kata
+
+(D) Anna
+
+
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -752,7 +788,8 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.34. C
 2.35. A
 2.36. B
-
+2.37. D
+2.38. A
 
 
 3.1. A
