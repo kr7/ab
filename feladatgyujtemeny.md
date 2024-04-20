@@ -501,6 +501,39 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Nullát.
 
 
+**2.34. Arra vagyunk kíváncsiak, hogy egy hallgató szerepel-e a megvédett tervezési feladatokat nyilvántartó adattáblában, azonban a Neptun kódját nem tudjuk pontosan elolvasni, mert egy "0" (nulla) vagy "O" betű szerepel benne. Az alábbiak közül melyik lekérdezést használná?**
+
+(A) select count(*) from megvedett_tervezesi_feladatok where neptun like "AB_123"
+
+(B) select count(*) from megvedett_tervezesi_feladatok where neptun line "AB%123"
+
+(C) select count(*) from megvedett_tervezesi_feladatok where neptun = "AB0123" or neptun = "ABO123"
+
+(D) select count(*) from megvedett_tervezesi_feladatok where neptun = "AB0123" and neptun = "ABO123"
+
+
+**2.35. Arra vagyunk kíváncsiak, hogy egy hallgató szerepel-e a megvédett tervezési feladatokat nyilvántartó adattáblában, azonban a Neptun kódjának negyedik karakterét nem tudjuk elolvasni. Az alábbiak közül melyik lekérdezést használná?**
+
+(A) select count(*) from megvedett_tervezesi_feladatok where neptun like "ABC_12"
+
+(B) select count(*) from megvedett_tervezesi_feladatok where neptun line "ABC%"
+
+(C) select count(*) from megvedett_tervezesi_feladatok where neptun = "ABCA12" or neptun = "ABCB12" or neptun = "ABCC12" or neptun = "ABCD12" ... és így tovább folytatva, végül: ... or "AVCZ12"  
+
+(D) select count(*) from megvedett_tervezesi_feladatok where neptun = "ABCA12" and neptun = "ABCB12" and neptun = "ABCC12" and neptun = "ABCD12" ... és így tovább folytatva, végül: ... and "AVCZ12" 
+
+
+**2.36. Milyen SQL utasítással tudatjuk a MySQL szerverrel, hogy a következő utasítások egy tranzakciót alkotnak?**
+
+(A) COMMIT
+
+(B) START TRANSACTION
+
+(C) INITIALIZE TRANSACTION
+
+(D) ROLLBACK
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -716,6 +749,10 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.31. C
 2.32. A
 2.33. B
+2.34. C
+2.35. A
+2.36. B
+
 
 
 3.1. A
