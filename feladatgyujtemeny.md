@@ -567,6 +567,15 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 (D) Anna
 
+**2.39. Mit történik, ha egy tranzakcióba tartozó SQL utasítások végrehajtása közben hirtelen áramszünet adódik és ezért nem lehet végrehajtani az összes utasítást?**
+
+(A) Amennyit végrehajtottunk, azoknak a hatása látszik az adatbázisban, a többi utasítás elveszik.
+
+(B) Az adatbázisszerver használhatatlan lesz.
+
+(C) Az adatbázisszerver letiltja a tranzakciót végző felhasználót.
+
+(D) A kiadott utasítások visszavonásra kerülnek (az adatbázis a tranzakció kezdete előtti állapotba tér vissza).
 
 
 
@@ -739,6 +748,45 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Adattábla
 
 
+# További témák
+
+**5.1. Mit jelent az *adatbányászat*?**
+
+(A) Adatok keresését ("bányászatát").
+
+(B) Rejtett összefüggések keresését nagy adathalmazokban.
+
+(C) Bitcoin bányászatát.
+
+(D) Adatok indexálását.
+
+
+**5.2. A MongoDB az adatokat...**
+
+(A) ...kulcs-érték párokban...
+
+(B) ...táblázatokban...
+
+(C) ...listákban...
+
+(D) ...halmazokban...
+
+tárolja.
+
+
+**5.3. A MongoDB kulcs-érték párjaiban egy érték**
+
+(A) csak egész szám lehet,
+
+(B) csak valós szám lehet,
+
+(C) csak egy szöveges érték (karaktersotozat, string) lehet,
+
+(D) szám, szöveges érték vagy akár egy kulcs-érték párokat tartalmazó szótár is lehet.
+
+
+
+
 # Megoldások
 
 1.1. C
@@ -790,6 +838,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 2.36. B
 2.37. D
 2.38. A
+2.39. D
 
 
 3.1. A
@@ -809,3 +858,8 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 4.8. B
 4.9. D
 4.10. C
+
+
+5.1. B
+5.2. A
+5.3. D
