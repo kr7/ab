@@ -567,6 +567,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 (D) Anna
 
+
 **2.39. Mit történik, ha egy tranzakcióba tartozó SQL utasítások végrehajtása közben hirtelen áramszünet adódik és ezért nem lehet végrehajtani az összes utasítást?**
 
 (A) Amennyit végrehajtottunk, azoknak a hatása látszik az adatbázisban, a többi utasítás elveszik.
@@ -577,6 +578,49 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 (D) A kiadott utasítások visszavonásra kerülnek (az adatbázis a tranzakció kezdete előtti állapotba tér vissza).
 
+
+**2.40. Milyen programozási nyelven írt kódból tudunk kapcsolódni egy MySQL szerverhez?**
+
+(A) Java
+
+(B) Python
+
+(C) PHP
+
+(D) Mindhárom előbbi nyelv esetében.
+
+
+**2.41. Milyen SQL adatbázishoz tudunk kapcsolódni Java nyelven írt programból?**
+
+(A) MySQL
+
+(B) Oracle
+
+(C) SQLite
+
+(D) Mindhárom előbbihez.
+
+
+**2.42. Hogyan védekezhetünk az SQL injection támadás ellen?**
+
+(A) Nem kapcsolódunk adatbáziszerverhez saját készítésű kódból.
+
+(B) El kell fogadnunk, hogy nem lehet minden támadás ellen védekezni.
+
+(C) Amennyire lehetséges, elkerüljük, hogy felhasználó által megadott adatokat behelyettesítsünk egy SQL utasításba; ha ez nem lehetséges, akkor legalább ellenőrizzük a felhasználó által megadott adatokat mielőtt behelyettesítenénk egy SQL utasításba.
+
+(D) Az SQL externalisation technikával.
+
+
+**2.43. Jó ötlet-e a MySQL adatbázisszerverhez való csatlakozáshoz szükséges jelszót beírni egy általunk készített kódba, amely csatlakozik az adatbázisszerverhez?**
+
+(A) Igen, mert így elkerüljük a kód túlbonyolítását, a kód megfelel a KISS (keep it simple stupid) elvnek.
+
+(B) Nem jó ötlet, de nincs más lehetőségünk, mert egy SQL szerverhez csatalkozáshoz szükség van a jelszóra, a keletkező kódot ezért csak megízható személlyel oszthatjuk meg.
+
+(C) A jelszó szerepeltetése a kódban nem gond, mert a jelszót ígyis-úgyis titkosított csatornán kereszül küldi el a Java virtuális gép a MySQL szervernek.
+
+(D) Jobb ötlet a jelszó tárolása egy környezeti változóban, és a környezeti változóból történő kiolvasása, amikor szükség van rá, így nyugodtan megoszthatjuk az általunk készített kódot a kollégáinkkal.
 
 
 # 3. Relációs algebra
@@ -785,6 +829,62 @@ tárolja.
 (D) szám, szöveges érték vagy akár egy kulcs-érték párokat tartalmazó szótár is lehet.
 
 
+**5.4. Hogyan tudunk lekérdezéseket definálni MS Access-ben?**
+
+(A) A grafikus lekérdezéstervezővel
+
+(B) SQL-ben
+
+(C) A grafikus lekérdezéstervezővel és SQL-ben egyaránt
+
+(D) AccessQL nyelven
+
+
+**5.5. Az adatbányászati technikák közül a regresszió...**
+
+(A) egy egyenest illeszt egy koordinátarendszer pontjaira.
+
+(B) becslést vagy előrejelzést végez folytonos skálán.
+
+(C) előre meghatározott csoportok valamelyikébe besorol egy új adatpéldányt.
+
+(D) csoportokat keres (csoportosítja a példányokat, a csoportok nincsenek előre meghatározva).
+
+
+**5.6. Az adatbányászati technikák közül az osztályozás...**
+
+(A) egy egyenest illeszt egy koordinátarendszer pontjaira.
+
+(B) becslést vagy előrejelzést végez folytonos skálán.
+
+(C) előre meghatározott csoportok valamelyikébe besorol egy új adatpéldányt.
+
+(D) csoportokat keres (csoportosítja a példányokat, a csoportok nincsenek előre meghatározva).
+
+
+**5.7. Az adatbányászati technikák közül a klaszterezés...**
+
+(A) egy egyenest illeszt egy koordinátarendszer pontjaira.
+
+(B) becslést vagy előrejelzést végez folytonos skálán.
+
+(C) előre meghatározott csoportok valamelyikébe besorol egy új adatpéldányt.
+
+(D) csoportokat keres (csoportosítja a példányokat, a csoportok nincsenek előre meghatározva).
+
+
+**5.8. Az alábbiak közül melyiket érdemes elvégeznünk, ha ChatGPT-t (vagy ahhoz hasonló co-pilot rendszert) használunk (szeretnénk használni) SQL lekérdezések generálására?**
+
+(A) A generált kód "code review" jellegű ellenőrzése ("értelmes"-e a kód).
+
+(B) A generált kód "unit teszt" jellegű ellenőrzése (kipróbálása minimalisztikus példák esetén).
+
+(C) Annak ellenőrzése, hogy vállalati policy engedi-e a rendszer használatát (kikerülhetnek-e bizalmas adatok, kódok a rendszer használata során a vállalaton kívülre).
+
+(D) Mindhárom fenti ellenőrzést érdemes (szükséges) elvégeznünk.
+
+
+
 
 
 # Megoldások
@@ -839,6 +939,10 @@ tárolja.
 2.37. D
 2.38. A
 2.39. D
+2.40. D
+2.41. D
+2.42. C
+2.43. D
 
 
 3.1. A
@@ -863,3 +967,8 @@ tárolja.
 5.1. B
 5.2. A
 5.3. D
+5.4. C
+5.5. B
+5.6. C
+5.7. D
+5.8. D
