@@ -623,7 +623,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Jobb ötlet a jelszó tárolása egy környezeti változóban, és a környezeti változóból történő kiolvasása, amikor szükség van rá, így nyugodtan megoszthatjuk az általunk készített kódot a kollégáinkkal.
 
 
-**2.44. Milyan típust használna amerikai dollárbeli árak tárolására?**
+**2.44. Milyen típust használna amerikai dollárbeli árak tárolására?**
 
 (A) INT
 
