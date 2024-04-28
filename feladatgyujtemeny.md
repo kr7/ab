@@ -114,13 +114,13 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 **1.10. Egy logaritmikus, azaz $O(log_2 n)$ komplexitású keresőalgoritmus 1000 elem között átlagosan 0.3 másodperc alatt találja meg a keresett elemet. 
 Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a keresett elemet 1 millió elem között?**
 
-(A) $1 000 000 \times 0.3 = 300 000$ másodperc alatt.
+(A) $log_2 1000 \times 0.3 = 3$ másodperc alatt.
 
 (B) $1 000 \times 0.3 = 300$ másodperc alatt.
 
 (C) $1000 \times 1000 \times 0.3 = 300 000$ másodperc alatt.
 
-(D) $log_2 1000 \times 0.3 = 3$ másodperc alatt.
+(D) $log_2 1000000 / log_2 1000 \ times 0.3 = 2 \times 0.3 = 0.6$ másodperc alatt.
 
 
 
