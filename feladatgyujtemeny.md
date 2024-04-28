@@ -623,6 +623,17 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Jobb ötlet a jelszó tárolása egy környezeti változóban, és a környezeti változóból történő kiolvasása, amikor szükség van rá, így nyugodtan megoszthatjuk az általunk készített kódot a kollégáinkkal.
 
 
+**2.44. Milyan típust használna amerikai dollárbeli árak tárolására?**
+
+(A) INT
+
+(B) FLOAT
+
+(C) DECIMAL(10,1)
+
+(D) DECIMAL(10,2)
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -943,6 +954,7 @@ tárolja.
 2.41. D
 2.42. C
 2.43. D
+2.44. D
 
 
 3.1. A
