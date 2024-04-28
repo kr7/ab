@@ -66,13 +66,13 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 (D) $5000 \times 0.01 = 50$ másodpercig
 
 
-**1.6. Egy $O(n log_2 n)$ komplexitású rendezőalgoritmussal rendezünk egy 100 sorból álló adattáblát, és ez 0.01 másodpercig tart. Nagyságrendileg mennyi ideig fog tartani egy ugyanolyan jellegű, de 100000 soros adattábla rendezése ugyanezzel az algoritmussal?**
+**1.6. Egy $O(n log_2 n)$ komplexitású rendezőalgoritmussal rendezünk egy 1000 sorból álló adattáblát, és ez 0.01 másodpercig tart. Nagyságrendileg mennyi ideig fog tartani egy ugyanolyan jellegű, de 1000000 soros adattábla rendezése ugyanezzel az algoritmussal?**
 
 (A) $1000 \times log_2 1000 \times 0.01 = 100$ másodpercig
 
 (B) $1000 \times 0.01 = 10$ másodpercig
 
-(C) $100000 \times log_2 100000 \times 0.01 = 1661$ másodpercig
+(C) $1000 \times log_2 1000000 / log_2 1000 \times 0.01 = 1000 \times 2 \times 0.01 = 20$ másodpercig  
 
 (D) $1000 \times 1000 \times 0.01 = 10000$ másodpercig
 
