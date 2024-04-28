@@ -634,6 +634,17 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) DECIMAL(10,2)
 
 
+**2.45. Táblák sorainak csoportosítása ("group by-os lekérdezés") során milyen kulcsszó után adhatunk meg a csoportokra vonatkozó feltételt?**
+
+(A) GROUP CONDITION
+
+(B) WHERE
+
+(C) HAVING
+
+(D) FULFILLING
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -955,6 +966,7 @@ tárolja.
 2.42. C
 2.43. D
 2.44. D
+2.45. C
 
 
 3.1. A
