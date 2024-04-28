@@ -120,7 +120,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 (C) $1000 \times 1000 \times 0.3 = 300 000$ másodperc alatt.
 
-(D) $log_2 1000000 / log_2 1000 \ times 0.3 = 2 \times 0.3 = 0.6$ másodperc alatt.
+(D) $log_2 1000000 / log_2 1000 \times 0.3 = 2 \times 0.3 = 0.6$ másodperc alatt.
 
 
 
