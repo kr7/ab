@@ -5,10 +5,7 @@ Running example jelleggel egy képzeletbeli pékség adatbázisán keresztül fo
 Az alábbi SQL utasítások közvetlenül végrehajthatók MySQL-ben (például a MySQL Workbench klienssel valamilyen MySQL szerverhez kapcsolódva). 
 
 Amennyiben nincs lehetőségünk, vagy nem szeretnénk MySQL szervert telepíteni illetve MySQL szerverhez kapcsolódni, 
-a példák kisebb-nagyobb módosítások után pedig az SQLite online felületén is kipróbálhatók (https://sqliteonline.com/). 
-
-A gyakorlatokon a MySQL szerver és kliens (MySQL Workbench) ugyanazon asztali gépre van telepítve. 
-Ehhez a minimalisztikus példához bőven elég egy asztali gép teljesítménye.
+a példák kisebb-nagyobb módosítások után az SQLite online felületén is kipróbálhatók (https://sqliteonline.com/). 
 
 # Az adatbázis létrehozása
 
