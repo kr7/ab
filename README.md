@@ -1,2 +1,2 @@
 # ab
-Adatbázisrendszerek tantárgyhoz kapcsolódó anyagok
+Adatbázisrendszerekhez kapcsolódó anyagok
