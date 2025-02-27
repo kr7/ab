@@ -23,13 +23,13 @@ create table Aruk (
   ar float,
   primary key (cikkszam) );
 
-insert into Aruk values ("001","kifli", 50, 0.49);
-insert into Aruk values ("002","zsemle", 60, 0.59);
-insert into Aruk values ("003","kenyer", 500, 2.79);
-insert into Aruk values ("004","nagy kenyer", 1000, 3.69);
-insert into Aruk values ("005","tej", 500, 3.19);
-insert into Aruk values ("006","kakao", 500, 4.99);
-insert into Aruk values ("007","szendvics", 500, 5.99);
+insert into Aruk values ('001','kifli', 50, 0.49);
+insert into Aruk values ('002','zsemle', 60, 0.59);
+insert into Aruk values ('003','kenyer', 500, 2.79);
+insert into Aruk values ('004','nagy kenyer', 1000, 3.69);
+insert into Aruk values ('005','tej', 500, 3.19);
+insert into Aruk values ('006','kakao', 500, 4.99);
+insert into Aruk values ('007','szendvics', 500, 5.99);
 
 create table Vasarlok (
   vasarlo_id varchar(10) unique,
@@ -37,9 +37,9 @@ create table Vasarlok (
   cim varchar(50),
   primary key (vasarlo_id) );
 
-insert into Vasarlok values ("V01", "Szupermarket Kft.", "1062 Budapest, Nyugati tér. 1.");
-insert into Vasarlok values ("V02", "Pista Bacsi", "2400 Dunaujvaros, Kossuth Lajos u. 15.");
-insert into Vasarlok values ("V03", "Eva neni", "2459 Racalmas, Petőfi Sándor u. 2.");
+insert into Vasarlok values ('V01', 'Szupermarket Kft.', '1062 Budapest, Nyugati tér. 1.');
+insert into Vasarlok values ('V02', 'Pista Bacsi', '2400 Dunaujvaros, Kossuth Lajos u. 15.');
+insert into Vasarlok values ('V03', 'Eva neni', '2459 Racalmas, Petőfi Sándor u. 2.');
 
 create table Tranzakciok (
   tranzakcio_id varchar(10),
@@ -50,19 +50,19 @@ create table Tranzakciok (
   foreign key (termek) references Aruk(cikkszam),
   foreign key (vevo) references Vasarlok(vasarlo_id));
 
-insert into Tranzakciok values ("T0001", "2024-02-09", null, "001", 5);
-insert into Tranzakciok values ("T0001", "2024-02-09", null, "005", 2);
-insert into Tranzakciok values ("T0002", "2024-02-09", null, "007", 1);
-insert into Tranzakciok values ("T0003", "2024-02-09", "V02", "003", 1);
-insert into Tranzakciok values ("T0004", "2024-02-09", "V03", "002", 3);
-insert into Tranzakciok values ("T0004", "2024-02-09", "V03", "005", 2);
-insert into Tranzakciok values ("T0005", "2024-02-10", null, "002", 6);
-insert into Tranzakciok values ("T0005", "2024-02-10", null, "005", 1);
-insert into Tranzakciok values ("T0006", "2024-02-10", "V01", "007", 50);
-insert into Tranzakciok values ("T0006", "2024-02-10", "V01", "007", 25);
-insert into Tranzakciok values ("T0007", "2024-02-10", null, "007", 1);
-insert into Tranzakciok values ("T0008", "2024-02-11", "V01", "007", 35);
-insert into Tranzakciok values ("T0008", "2024-02-12", "V01", "007", 15);
+insert into Tranzakciok values ('T0001', '2024-02-09', null, '001', 5);
+insert into Tranzakciok values ('T0001', '2024-02-09', null, '005', 2);
+insert into Tranzakciok values ('T0002', '2024-02-09', null, '007', 1);
+insert into Tranzakciok values ('T0003', '2024-02-09', 'V02', '003', 1);
+insert into Tranzakciok values ('T0004', '2024-02-09', 'V03', '002', 3);
+insert into Tranzakciok values ('T0004', '2024-02-09', 'V03', '005', 2);
+insert into Tranzakciok values ('T0005', '2024-02-10', null, '002', 6);
+insert into Tranzakciok values ('T0005', '2024-02-10', null, '005', 1);
+insert into Tranzakciok values ('T0006', '2024-02-10', 'V01', '007', 50);
+insert into Tranzakciok values ('T0006', '2024-02-10', 'V01', '007', 25);
+insert into Tranzakciok values ('T0007', '2024-02-10', null, '007', 1);
+insert into Tranzakciok values ('T0008', '2024-02-11', 'V01', '007', 35);
+insert into Tranzakciok values ('T0008', '2024-02-12', 'V01', '007', 15);
 ```
 
 SQLite online:
@@ -147,24 +147,31 @@ show columns from Aruk;
 select * from Aruk;
 select * from Aruk where ar > 1;
 select megnevezes, ar from Aruk where ar > 1;
-select megnevezes, ar from Aruk where ar > 1 order by ar;
-select megnevezes, ar from Aruk where ar > 1 order by ar desc;
+select megnevezes, ar from Aruk where ar > 1 and ar < 5;
+select megnevezes, ar from Aruk where not(ar > 1 and ar < 5);
+select megnevezes, ar from Aruk where ar < 1 or ar > 5;
 ```
 
 Ahhoz, hogy az eredményt rendezetten kapjuk, meg kell adnunk, hogy mi szerint rendezünk. Ennek hiányában az eredménytábla sorainak sorrendjére nincs semmilyen garancia (nem biztos, hogy pl. cikkszám szerint, vagy bármi más szerint, rendezettek):
 ```
 select * from Aruk order by megnevezes;
+select megnevezes, ar from Aruk where ar > 1 order by ar;
+select megnevezes, ar from Aruk where ar > 1 order by ar desc;
+select * from Aruk order by ar, megnevezes;
 ```
 
 ```
 select * from Vasarlok;
 select * from Vasarlok where cim = '2459';
 select * from Vasarlok where cim like '2459%';
+select * from Vasarlok where cim like '%u. 2.';
+select * from Vasarlok where cim like '%Sándor%';
+select * from Vasarlok where cim like '%S_ndor%';
 
 select * from Tranzakciok limit 5;
 select * from Tranzakciok where tranzakcio_id = 'T0001';
 
-select distinct(tranzakcio_id) from Tranzakciok
+select distinct tranzakcio_id from Tranzakciok
 ```
 Legkisebb áru termék megnevezésének lekérdezése
 
