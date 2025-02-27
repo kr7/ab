@@ -170,14 +170,45 @@ select * from Vasarlok where cim like '%S_ndor%';
 
 select * from Tranzakciok limit 5;
 select * from Tranzakciok where tranzakcio_id = 'T0001';
+```
 
+Tranzakcióazonosítószámok listázása úgy, hogy egy azonosító csak egyszer szerepeljen az eredménytáblában:
+```
 select distinct tranzakcio_id from Tranzakciok
 ```
+
+Megszámoljuk, hogy hány különböző tranzakcióazonosítószám van az adattáblában:
+``` 
+select count(distinct tranzakcio_id) from Tranzakciok
+```
+
+"Distinct" nélük azt kapnánk, ahány sorban a tranzakcio_id mező kitöltött:
+```
+select count(tranzakcio_id) from Tranzakciok
+```
+
+A tábla sorainak száma:
+```
+select count(*) from Tranzakciok
+```
+
 Legkisebb áru termék megnevezésének lekérdezése
 
 ```
+select megnevezes from Aruk order by ar limit 1
+
 select megnevezes from Aruk 
 where ar = (select min(ar) from Aruk);
+```
+
+Mi a különbság a két lekérdezés között?
+
+A fenti módon csak akkor használható egy SQL lekérdezés eredménye egy másik SQL lekérdezésben, ha a "belső" lekérdezés eredménye egy 1x1-es tábla, azaz **egyetlen** szám, szöveg, dátum, stb.
+
+Megpróbáljuk lekérdezni a két legolcsóbb termék megnevezését olyan módon, hogy egy lekérdezést használunk egy másik lekérdezésben:
+```
+select megnevezes from Aruk where 
+ar in (select ar from Aruk order by ar limit 2);
 ```
 
 # Új sor (rekord, példány) beszúrása az adattáblába
@@ -200,20 +231,37 @@ create table furcsa_megnevezesek
 where megnevezes like 't%');
 
 insert into furcsa_megnevezesek 
-(select megnevezes from Aruk where megnevezes like "k%")
+(select megnevezes from Aruk where megnevezes like 'k%')
 
+```
+
+# Idézőjelek
+
+MySQL-ben egyszeres (') és kétszeres (") idézőjeleket is használhatunk, de "elegánsabb" a kódunk, ha konzekvensen csak egyféle idézőjelet használunk. Szükség esetén az alábbi módon tudjuk "kieszképelni" az idézőjelet, vagy más karaktert:
+
+```
+insert into furcsa_megnevezesek values ('l\'alma')
+insert into furcsa_megnevezesek values ('l\\alma')
+insert into furcsa_megnevezesek values ('l\\\\alma')
 ```
 
 # Több táblára vonatkozó lekérdezések, join
 
-A "T0001" azonosítójú tranzakció mellé "odaírjuk" a termék megnevezését illetve árát:
+A tranzakciók mellé "odaírjuk" a terméket megnevezését:
 
 ```
-select Tranzakciok.*, Aruk.megnevezes from Tranzakciok, Aruk 
-where tranzakcio_id = 'T0001' and Tranzakciok.termek = Aruk.cikkszam;
+select Tranzakciok.*, Aruk.megnevezes 
+from Tranzakciok, Aruk
+where Tranzakciok.termek = Aruk.cikkszam
+order by tranzakcio_id;
+```
 
-select Tranzakciok.*, Aruk.megnevezes, Aruk.ar from Tranzakciok, Aruk 
-where tranzakcio_id = 'T0001' and Tranzakciok.termek = Aruk.cikkszam;
+Ugyanez join-nal:
+```
+select Tranzakciok.*, Aruk.megnevezes 
+from Tranzakciok join Aruk
+on Tranzakciok.termek = Aruk.cikkszam
+order by tranzakcio_id;
 ```
 
 Az alábbiak közül melyik lekérdezés adja azt, hogy mennyit költött a vevő az egyes tranzakciokban?
