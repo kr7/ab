@@ -264,7 +264,7 @@ on Tranzakciok.termek = Aruk.cikkszam
 order by tranzakcio_id;
 ```
 
-Az alábbiak közül melyik lekérdezés adja azt, hogy mennyit költött a vevő az egyes tranzakciokban?
+Az alábbiak közül valamelyik lekérdezés megadja, hogy mennyit költött a vevő a T0001-es tranzakciokban?
 Miért használjuk a round függvényt?
 
 ```
