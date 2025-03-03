@@ -645,6 +645,40 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) FULFILLING
 
 
+**2.46. Mit eredményez az következő MySQL lekérdezés: SELECT * FROM ALKALMAZOTTAK LIMIT 10,20**
+
+(A) Az ALKALMAZOTTAK tábla első 20 sorát
+
+(B) Az ALKALMAZOTTAK tábla első 10 sorát
+
+(C) Az ALKALMAZOTTAK tábla sorait a 11-dik sortól a 20-dik sorig
+
+(D) Az ALKALMAZOTTAK tábla sorait a 11-dik sortól a 30-dik sorig
+
+
+**2.47. Mivel egészít ki egy MySQL lekérdezést, ha azt szeretné, hogy csak az eredménytábla sorai közül csak az 5-dik, 6-dik, és 7-dik  jelenjen meg?**
+
+(A) ... LIMIT 5,7
+
+(B) ... LIMIT 5,3
+
+(C) ... LIMIT 4,3
+
+(D) ... LIMIT 3,4
+
+
+**2.48. Melyik nem résznyelve az SQL-nek?**
+
+(A) User Iterface Language (UIL)
+
+(B) Data Query Language (DQL)
+
+(C) Data Definition Language (DDL)
+
+(D) Data Control Language (DCL)
+
+
+
 # 3. Relációs algebra
 
 **3.1. Kinek a nevéből származik az algebra szavunk?**
@@ -967,6 +1001,9 @@ tárolja.
 2.43. D
 2.44. D
 2.45. C
+2.46. D
+2.47. C
+2.48. A
 
 
 3.1. A
