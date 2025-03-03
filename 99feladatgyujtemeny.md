@@ -678,6 +678,18 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Data Control Language (DCL)
 
 
+**2.49. Az alábbi programozási stílusok közül leginkább melyik jellemző az SQL-re?**
+
+(A) Imperatív
+
+(B) Deklaratív
+
+(C) Objektum-orientált
+
+(D) Egyik sem 
+
+
+
 
 # 3. Relációs algebra
 
@@ -1004,7 +1016,7 @@ tárolja.
 2.46. D
 2.47. C
 2.48. A
-
+2.49. B
 
 3.1. A
 3.2. A
