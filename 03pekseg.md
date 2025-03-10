@@ -317,6 +317,7 @@ having vegosszeg > 5
 order by vegosszeg desc;
 ```
 
+Gyakori aggregációs függvények: sum, avg, std, min, max. 
 
 Join
 
@@ -328,7 +329,11 @@ where Tranzakciok.vevo = Vasarlok.vasarlo_id;
 select Tranzakciok.*, Vasarlok.nev 
 from Tranzakciok JOIN Vasarlok
 on Tranzakciok.vevo = Vasarlok.vasarlo_id;
+```
 
+A bal ill. jobboldali táblák páros nélkül maradt elemeit is megjelenítjük:
+
+```
 select Tranzakciok.*, Vasarlok.nev 
 from Tranzakciok LEFT OUTER JOIN Vasarlok
 on Tranzakciok.vevo = Vasarlok.vasarlo_id;
@@ -347,6 +352,8 @@ select * from Tranzakciok where termek = '003';
 union
 select * from Tranzakciok where termek = '006';
 ```
+
+Union halmazművelet: ha egy rekord mind a két halmazban benne van, aminek az únióját képezzük, az eredménytáblában csak egyszer fog szerepelni.
 
 
 # A lekérdezés eredményének használata egy másik lekérdezésben
@@ -370,7 +377,7 @@ order by vegosszeg desc) as tranzakciok_vegosszeggel
 group by vevo;
 ```
 
-Tranzakciók naponkénti darabszámának meghatározása
+Tranzakciók naponkénti darabszámának meghatározása:
 
 ```
 select distinct tranzakcio_id, datum from Tranzakciok;
@@ -384,7 +391,7 @@ select datum, count(*) from
 group by datum;
 ```
 
-Napi bevétel
+Napi bevétel:
 
 ```
 select * from Tranzakciok;
