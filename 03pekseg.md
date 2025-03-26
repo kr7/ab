@@ -560,7 +560,10 @@ create table tranzakciok_alapadatai
 ALTER TABLE tranzakciok_alapadatai ADD PRIMARY KEY (tranzakcio_id);
 
 create table vasarlas as 
-(select tranzakcio_id, termek, mennyiseg from tranzakciok); 
+(select tranzakcio_id, termek, mennyiseg from tranzakciok);
+
+alter table vasarlas add foreign key (tranzakcio_id) 
+references tranzakciok_alapadatai(tranzakcio_id); 
 
 drop table tranzakciok;
 ```
