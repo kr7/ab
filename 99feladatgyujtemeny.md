@@ -174,7 +174,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 **select * from arucikk where ar > 1000 union select * from arucikk where ar < 2000**
 
-(A) Az összes terméket tartalmazó adattáblát, amelyben néhány termék akár kétszer is szerepelhet.
+(A) Az összes terméket tartalmazó adattáblát.
 
 (B) Azon termékeket tartalmazó adattáblát, amelyek ára 1000 Ft és 2000 Ft közötti.
 
@@ -393,7 +393,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Semmi (nem kapunk hibaüzenetet, de a rekord nem is kerül be egy táblába sem).
 
 
-**2.24. Le szeretné kérdezni egy adattáblából azon hallgatók nevét egy neptun kódját, akiknek egyik keresztneve Péter. A teljes nevet egy oszlopban tároljuk. Melyik lekérdezést használja? (Féltételezheti, hogy az adattábla és a lekérdezésben hivatkozott oszlopok léteznek.)**
+**2.24. Le szeretné kérdezni egy adattáblából azon hallgatók nevét és neptun kódját, akiknek egyik keresztneve Péter. A teljes nevet egy oszlopban tároljuk. Melyik lekérdezést használja? (Féltételezheti, hogy az adattábla és a lekérdezésben hivatkozott oszlopok léteznek.)**
 
 (A) SELECT NEV, NEPTUN FROM HALLGATOK WHERE NEV = "%Péter%"
 
@@ -645,7 +645,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) FULFILLING
 
 
-**2.46. Mit eredményez az következő MySQL lekérdezés: SELECT * FROM ALKALMAZOTTAK LIMIT 10,20**
+**2.46. Mit eredményez a következő MySQL lekérdezés: SELECT * FROM ALKALMAZOTTAK LIMIT 10,20**
 
 (A) Az ALKALMAZOTTAK tábla első 20 sorát
 
@@ -656,7 +656,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Az ALKALMAZOTTAK tábla sorait a 11-dik sortól a 30-dik sorig
 
 
-**2.47. Mivel egészít ki egy MySQL lekérdezést, ha azt szeretné, hogy csak az eredménytábla sorai közül csak az 5-dik, 6-dik, és 7-dik  jelenjen meg?**
+**2.47. Mivel egészít ki egy MySQL lekérdezést, ha azt szeretné, hogy az eredménytábla sorai közül csak az 5-dik, 6-dik, és 7-dik  jelenjen meg?**
 
 (A) ... LIMIT 5,7
 
