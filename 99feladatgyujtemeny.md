@@ -94,7 +94,7 @@ Visszajelzéseket, javaslatokat, hibák jelzését örömmel várom a buza.krisz
 
 (B) Rendezett adatokban tudunk $O(log n)$ komplexitással keresni.
 
-(C) Rendezetelen adatokban történő keresés esetére nem létezik $O(n log n)$ komplexitásúnál hatékonyabb algoritmus.
+(C) Rendezetlen adatokban történő keresés esetére nem létezik $O(n log n)$ komplexitásúnál hatékonyabb algoritmus.
 
 (D) A rendezetlen adatokban történő keresés $O(n)$ komplexitással megoldható.
 
@@ -180,10 +180,10 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 (C) Azon termékeket tartalmazó adattáblát, amelyek ára 1000 Ft-nál nagyobb.
 
-(D) Azon termékeket tartalmazó adattánlát, amelyek ára 2000 Ft-nál kisebb.
+(D) Azon termékeket tartalmazó adattáblát, amelyek ára 2000 Ft-nál kisebb.
 
 
-**2.6. Adott egy repülőjáratokat tartalmazó *jaratok* elnevezesű adattábla, mely az alábbi oszlopokkal rendelkezik: (i) *jaratszam*, (ii) *honnan*: kiindulási reptér, (iii) *hova*: érkezési reptér, (iv) *indulas*: indulás időpontja (datetime), (v) *erkezes*: érkezés időpontja (datetime). Kérdezze le azon városok listáját, ahová (eszerint az adatázis szerint) Budapestről valaha repült járat, egy város csak egyszer szerepeljen az eredményként kapott listában!**
+**2.6. Adott egy repülőjáratokat tartalmazó *jaratok* elnevezésű adattábla, mely az alábbi oszlopokkal rendelkezik: (i) *jaratszam*, (ii) *honnan*: kiindulási reptér, (iii) *hova*: érkezési reptér, (iv) *indulas*: indulás időpontja (datetime), (v) *erkezes*: érkezés időpontja (datetime). Kérdezze le azon városok listáját, ahová (eszerint az adatázis szerint) Budapestről valaha repült járat, egy város csak egyszer szerepeljen az eredményként kapott listában!**
 
 (A) select honnan from jaratok where hova = "Budapest"
 
@@ -279,7 +279,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Az adattábla olyan sorát, amelyben minden cella értéke különböző.
 
 
-**2.14. SELECT ... lekérdezésekben milyen kulcsó után adhatjuk meg, hogy az adattábla melyik sorait kívánjuk lekérdezni?**
+**2.14. SELECT ... lekérdezésekben milyen kulcszó után adhatjuk meg, hogy az adattábla melyik sorait kívánjuk lekérdezni?**
 
 (A) FROM
 
@@ -290,7 +290,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) GROUP BY
 
 
-**2.15. SELECT ... lekérdezésekben milyen kulcsó után adhatjuk meg, hogy melyik adattáblából kívánunk lekérdezni adatokat?**
+**2.15. SELECT ... lekérdezésekben milyen kulcszó után adhatjuk meg, hogy melyik adattáblából kívánunk lekérdezni adatokat?**
 
 (A) FROM
 
@@ -301,7 +301,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) GROUP BY
 
 
-**2.16. SELECT ... lekérdezésekben milyen kulcsó után adhatjuk meg, hogy melyik oszlop szerint kívánunk rendezni a lekérdezett adatokat?**
+**2.16. SELECT ... lekérdezésekben milyen kulcszó után adhatjuk meg, hogy melyik oszlop szerint kívánunk rendezni a lekérdezett adatokat?**
 
 (A) FROM
 
@@ -393,7 +393,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) Semmi (nem kapunk hibaüzenetet, de a rekord nem is kerül be egy táblába sem).
 
 
-**2.24. Le szeretné kérdezni egy adattáblából azon hallgatók nevét és neptun kódját, akiknek egyik keresztneve Péter. A teljes nevet egy oszlopban tároljuk. Melyik lekérdezést használja? (Féltételezheti, hogy az adattábla és a lekérdezésben hivatkozott oszlopok léteznek.)**
+**2.24. Le szeretné kérdezni egy adattáblából azon hallgatók nevét és neptun kódját, akiknek egyik keresztneve Péter. A teljes nevet egy oszlopban tároljuk. Melyik lekérdezést használja? (Feltételezheti, hogy az adattábla és a lekérdezésben hivatkozott oszlopok léteznek.)**
 
 (A) SELECT NEV, NEPTUN FROM HALLGATOK WHERE NEV = "%Péter%"
 
@@ -404,7 +404,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 (D) SELECT NEV, NEPTUN FROM HALLGATOK WHERE NEV LIKE "\*Péter\*"
 
 
-**2.25. A lekérdezésünk egy túlságosan nagy adattáblát eredményez, ugyakkor valójában csak az adattábla első néhány sorára van szükségünk. Milyen kulcsszó használatával érhető el az eredménytábla első 15 sorra történő korlátozása?**
+**2.25. A lekérdezésünk egy túlságosan nagy adattáblát eredményez, ugyanakkor valójában csak az adattábla első néhány sorára van szükségünk. Milyen kulcsszó használatával érhető el az eredménytábla első 15 sorra történő korlátozása?**
 
 (A) RESTRICT 15
 
@@ -616,9 +616,9 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 (A) Igen, mert így elkerüljük a kód túlbonyolítását, a kód megfelel a KISS (keep it simple stupid) elvnek.
 
-(B) Nem jó ötlet, de nincs más lehetőségünk, mert egy SQL szerverhez csatalkozáshoz szükség van a jelszóra, a keletkező kódot ezért csak megízható személlyel oszthatjuk meg.
+(B) Nem jó ötlet, de nincs más lehetőségünk, mert egy SQL szerverhez csatlakozáshoz szükség van a jelszóra, a keletkező kódot ezért csak megbízható személlyel oszthatjuk meg.
 
-(C) A jelszó szerepeltetése a kódban nem gond, mert a jelszót ígyis-úgyis titkosított csatornán kereszül küldi el a Java virtuális gép a MySQL szervernek.
+(C) A jelszó szerepeltetése a kódban nem gond, mert a jelszót ígyis-úgyis titkosított csatornán keresztül küldi el a Java virtuális gép a MySQL szervernek.
 
 (D) Jobb ötlet a jelszó tárolása egy környezeti változóban, és a környezeti változóból történő kiolvasása, amikor szükség van rá, így nyugodtan megoszthatjuk az általunk készített kódot a kollégáinkkal.
 
@@ -807,7 +807,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 **4.6. Hogyan jelöljük az egyed-kapcsolat diagramokon az idegen kulcsot?**
 
-(A) Szagatott aláhúzással.
+(A) Szaggatott aláhúzással.
 
 (B) Dőlt betűvel.
 
@@ -818,7 +818,7 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 **4.7. Hogyan jelöljük az egyed-kapcsolat diagramokon az indexeket?**
 
-(A) Szagatott aláhúzással.
+(A) Szaggatott aláhúzással.
 
 (B) Dőlt betűvel.
 
@@ -892,7 +892,7 @@ tárolja.
 
 (B) csak valós szám lehet,
 
-(C) csak egy szöveges érték (karaktersotozat, string) lehet,
+(C) csak egy szöveges érték (karaktersorozat, string) lehet,
 
 (D) szám, szöveges érték vagy akár egy kulcs-érték párokat tartalmazó szótár is lehet.
 
