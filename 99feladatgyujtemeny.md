@@ -859,6 +859,14 @@ Ugyanezen algoritmus nagyságrendileg mennyi idő alatt fogja megtalálni a kere
 
 (D) Adattábla
 
+**4.11. Készítsük el a PEKSEG adatbázis (a) egyed-kapcsolat diagramját és (b) UML diagramját!**
+
+**4.12. Egy okos sípályán a síelők a felvonót egy mobil app letöltése után használhatják mobiltelefonjaikkal. Az app telepítése után regisztrálniuk kell. A regisztráció során megadott nevüket, e-mail címüket és bankkártyaszámukat az adatbázisban tároljuk. A regisztrációt követően az app segítségével a síelők különféle bérleteket vásárolhatnak a felvonókra. A fogyasztói szokások jobb megismerése és az ajánlatok személyre szabásához tároljuk, hogy melyik síelő melyik felvonót mikor használta.
+Tervezze meg a fenti okos sípálya adatbázisát. Adja meg 
+(a) az adatbázis entitás-relációs diagramját, 
+(b) UML diagramját, és
+(c) az adatbázis létrehozásához szükséges MySQL kódot.**
+
 
 # További témák
 
