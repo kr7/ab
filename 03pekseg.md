@@ -122,9 +122,10 @@ A fenti kód, habár működőképes, sok szempontból nem helyes (pl. oszlopok 
 
 # Entitázs-relációs diagram
 
-Alább látható a fentiekben létehozott adatbázis entitázs-relációs diagramja. Figyelem: az adatbázis nincs normalizálva, a diagram aktuális állapota igyekszik minél pontosabban leképezni a fenti, normalizálatlan adatbázist. Külön entitázsnak tekinthetnénk a tranzakciókat és ekkor a *vásárlás* reláció teremtene kapcsolatot a *vásárlók (vevők)*, *áruk* és *tranzakciók* között.  
+Alább látható a fentiekben létehozott adatbázis entitázs-relációs ill. UML diagramja. Figyelem: az adatbázis nincs normalizálva, a diagram aktuális állapota igyekszik minél pontosabban leképezni a fenti, normalizálatlan adatbázist. Külön entitázsnak tekinthetnénk a tranzakciókat és ekkor a *vásárlás* reláció teremtene kapcsolatot a *vásárlók (vevők)*, *áruk* és *tranzakciók* között.  
 
-![image](https://github.com/kr7/ab/assets/7807330/ca6b15e5-4e8c-4a32-8e84-b6a850ea3fb5)
+<img width="1860" height="1265" alt="image" src="https://github.com/user-attachments/assets/74705d28-7c61-4176-b4a4-cb1adbc020e2" />
+
 
 
 # A MySQL szerveren található adatbázisok listázása
