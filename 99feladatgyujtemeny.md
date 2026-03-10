@@ -1053,3 +1053,7 @@ tárolja.
 5.6. C
 5.7. D
 5.8. D
+
+
+4.12. (a), (b)
+<img width="1575" height="2175" alt="image" src="https://github.com/user-attachments/assets/63d50248-0497-41af-b8f9-c5b5ee158963" />
