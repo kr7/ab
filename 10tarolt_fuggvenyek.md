@@ -116,11 +116,14 @@ END
 CREATE DEFINER=`hallgato`@`%` FUNCTION `betuvel3`(szam int) RETURNS varchar(200) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
     DETERMINISTIC
 BEGIN
-	if szam < 100 or szam > 999 then
+	if szam < 100 or szam > 999 then 
 		return 'hiba';
+	end if;
+	if szam % 100 = 0 then 
+		return concat(betuvel1(floor(szam/100)),'szaz');
 	else
-		return concat(betuvel1(floor(szam / 100)), 
-        'szaz', betuvel2(szam % 100));
+		return concat(betuvel1(floor(szam/100)),'szaz', 
+               betuvel2(szam % 100));
 	end if;
 END
 ```
@@ -131,6 +134,9 @@ CREATE DEFINER=`hallgato`@`%` FUNCTION `betuvel4`(szam int) RETURNS varchar(200)
 BEGIN
 	if szam < 1000 or szam > 9999 then
 		return 'hiba';
+	end if;
+	if szam % 1000 = 0 then 
+		return concat(betuvel1(floor(szam/1000)),'ezer');
 	else
 		return concat(betuvel1(floor(szam / 1000)), 
         'ezer', betuvel3(szam % 1000));
