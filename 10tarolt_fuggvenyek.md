@@ -53,18 +53,22 @@ END
 
 ```
 CREATE DEFINER=`hallgato`@`%` FUNCTION `betuvel2`(szam int) RETURNS varchar(200) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
+    DETERMINISTIC
 BEGIN
-	if szam = 10 then
-		return 'tiz';
+	if szam < 10 then 
+		return betuvel1(szam);
+	end if;
+	if szam = 10 then 
+		return "tiz";
 	end if;
     if szam > 10 and szam < 20 then
-		return concat('tizen', betuvel1(szam%10));
+		return concat("tizen", betuvel1(szam%10));
 	end if;
     if szam = 20 then
-		return 'husz';
+		return "husz";
 	end if;
     if szam > 20 and szam < 30 then
-		return concat('huszon', betuvel1(szam%10));
+		return concat("huszon", betuvel1(szam%10));
 	end if;
     if szam = 30 then 
 		return 'harminc';
@@ -116,8 +120,8 @@ END
 CREATE DEFINER=`hallgato`@`%` FUNCTION `betuvel3`(szam int) RETURNS varchar(200) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
     DETERMINISTIC
 BEGIN
-	if szam < 100 or szam > 999 then 
-		return 'hiba';
+	if szam < 100 then 
+		return betuvel2(szam);
 	end if;
 	if szam % 100 = 0 then 
 		return concat(betuvel1(floor(szam/100)),'szaz');
@@ -125,6 +129,7 @@ BEGIN
 		return concat(betuvel1(floor(szam/100)),'szaz', 
                betuvel2(szam % 100));
 	end if;
+    return "hiba";
 END
 ```
 
@@ -138,8 +143,33 @@ BEGIN
 	if szam % 1000 = 0 then 
 		return concat(betuvel1(floor(szam/1000)),'ezer');
 	else
-		return concat(betuvel1(floor(szam / 1000)), 
-        'ezer', betuvel3(szam % 1000));
+		if szam > 2000 then 
+			return concat(betuvel1(floor(szam / 1000)), 
+			'ezer-', betuvel3(szam % 1000));
+		else 
+        	return concat(betuvel1(floor(szam / 1000)), 
+			'ezer', betuvel3(szam % 1000));
+		end if;
 	end if;
+END
+```
+
+```
+CREATE DEFINER=`hallgato`@`%` FUNCTION `betuvel`(szam int) RETURNS varchar(200) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
+    DETERMINISTIC
+BEGIN
+	if szam >=0 and szam < 10 then 
+		return betuvel1(szam);
+	end if;
+	if szam >=10 and szam < 100 then 
+		return betuvel2(szam);
+	end if;
+	if szam >=100 and szam < 1000 then 
+		return betuvel3(szam);
+	end if;
+	if szam >=1000 and szam < 10000 then 
+		return betuvel4(szam);
+	end if;
+    return 'hiba';
 END
 ```
