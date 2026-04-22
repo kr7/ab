@@ -23,9 +23,6 @@ public String email(String nev) {
 }
 
 void main() {
-
-
-
   try ( Connection con = DriverManager.getConnection(
           "jdbc:mysql://localhost:3306/pekseg",
           "hallgato", "h411gato");
