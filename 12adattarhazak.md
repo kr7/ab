@@ -1,6 +1,6 @@
 # Adattárházak
 
-(a) A „Multidimenzionális modell leképezése relációs adatmodellbe: csillagséma” c. fólián látható adattárházból kérdezze le a „Food” termékcsoportba (Product_Category = ’Food’) tartozó termékek eladott mennyiségét (i) évente, (ii) negyedévente, (iii) havonta és (iv) hetente!
+(a) A „Multidimenzionális modell leképezése relációs adatmodellbe: csillagséma” c. fólián látható adattárházból kérdezze le a „Food” termékcsoportba (Product_Category = ’Food’) tartozó termékek eladott mennyiségét (i) évente, (ii) negyedévente és (iii) havonta!
 (b) Ismételje az előbbi lekérdezést egy kiválasztott ország (pl. Magyarország) esetében.
 
 Az adattárházat létrehozó kód: 
@@ -9,10 +9,10 @@ Az adattárházat létrehozó kód:
 ```
 CREATE TABLE products (
     id INTEGER PRIMARY KEY,
-    ean_code TEXT NOT NULL UNIQUE,
-    product_name TEXT NOT NULL,
-    brand TEXT NOT NULL,
-    category TEXT NOT NULL
+    ean_code varchar(20) NOT NULL UNIQUE,
+    product_name varchar(100) NOT NULL,
+    brand varchar(20) NOT NULL,
+    category varchar(20) NOT NULL
 );
 
 INSERT INTO products (id, ean_code, product_name, brand, category) VALUES
